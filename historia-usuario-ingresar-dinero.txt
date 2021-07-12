@@ -1,5 +1,0 @@
-GRUPO 3  - Ingresar Dinero
-
-Como usuario
-Quiero ingresar dinero a la cuenta de la wallet
-Lo haría a través de transferencia bancaria a la cuenta CVU (virtual) de la wallet, creada previamente por el sistema en la {la creación del perfil usuario} que asigna un número de Clave Virtual Uniforme (CVU) que es un código de 22 dígitos que facilita la transferencia de dinero entre cuentas virtuales, bancarias y no bancarias de manera inmediata y gratuita. Para poder tener saldo en mi cuenta de la e-wallet y así poder realizar transacciones dentro de la wallet.
