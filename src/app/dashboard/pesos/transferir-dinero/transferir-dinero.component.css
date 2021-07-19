@@ -18,7 +18,7 @@
     margin-bottom: 40px;
     margin-left: 10px;
     margin-right: 10px;
-    border: none !important;
+    border: none ;
     box-shadow: 0 6px 12px 0 rgb(0 0 0 / 20%);
     background-color:#6BACE9;
     color:aliceblue;
@@ -35,7 +35,7 @@
     margin-bottom: 60px;
     margin-left: 30px;
     margin-right: 30px;
-    border: none !important;
+    border: none;
     box-shadow: none;
     color:aliceblue;
     border-radius: 20px;
@@ -60,10 +60,10 @@ body {
 
 button {
     padding: 5px 15px;
-    border-radius: 5px !important;
+    border-radius: 5px;
     margin: 5px 0px;
     box-sizing: border-box;
     border: 1px solid #ccc;
-    font-size: 18px !important;
+    font-size: 18px;
     font-weight: 300
 }
