@@ -1,17 +1,3 @@
-.cont-int {
-    display: flex;
-    width: 1080px;
-    margin: 0 auto;
-    align-items: center;
-}
-.cont-der {
-    flex-basis: 50%;
-}
-
-.cont-izq {
-    flex-basis: 50%;
-}
-
 .card {
     padding: 30px 30px;
     margin-top: 40px;
@@ -39,18 +25,6 @@
     box-shadow: none;
     color:aliceblue;
     border-radius: 20px;
-}
-
-
-
-body {
-    color: #000;
-    overflow-x: hidden;
-    height: 90vh;
-    width: 100vw;
-    background-image: url("/assets/transf/Fondo.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
 }
 
 .marg{
