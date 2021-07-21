@@ -29,15 +29,10 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
-
             ],
-<<<<<<< HEAD
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
-=======
-            "scripts": ["node_modules/bootstrap/dist/css/bootstrap.css"]
->>>>>>> ef1eea9386c22dabb68c040985bec43010e9afce
           },
           "configurations": {
             "production": {
