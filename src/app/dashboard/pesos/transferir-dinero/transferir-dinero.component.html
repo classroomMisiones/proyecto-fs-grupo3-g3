@@ -1,1 +1,85 @@
-<p>transferir-dinero works!</p>
+
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-12 col-lg-6">
+            
+                <div class="card justify-center-center">
+                    
+                    <h5 class="text-center mb-4 fs-4">TRANSFERENCIAS</h5>
+
+                    <form class="row g-1 needs-validation" novalidate>
+                    
+
+                            <div class="col-12 mb-3">
+                                <label for="validationCustom01" class="form-label">CVU/CBU<span class="text-danger"> *</span></label>
+                                <input type="text" class="form-control" name="cbu" id="validationCustom01" placeholder="Destino" required>
+                                <div class="valid-feedback">Ok!</div>
+                                <div class="invalid-feedback">Por favor, complete el campo</div>
+                            </div>
+                            
+                            <div class="col-12 mb-3">
+                                <label for="Moneda" class="form-label">Moneda<span class="text-danger"> *</span></label>
+                                <select class="form-select" id="moneda" required>
+                                    <option selected disabled value="">Seleccione tipo de moneda...</option>
+                                    <option value="1">Pesos</option>
+                                    <option value="2">Bitcoins</option>
+                                    <option value="3">Ethereum</option>
+                                    <option value="4">Dogecoin</option>
+                                    <option value="5">Misiocoin</option>
+                                </select>
+                                <div class="valid-feedback">Ok!</div>
+                                <div class="invalid-feedback">Por favor, seleccione una opción</div>
+                            </div>
+                            
+                            <div class="col-12 mb-3">
+                                <label for="Moneda" class="form-label">Monto a transferir<span class="text-danger"> *</span></label>
+                                <input type="text" class="form-control" placeholder="Monto" required>
+                                <div class="valid-feedback">Ok!</div>
+                                <div class="invalid-feedback">Por favor, complete el campo</div>
+                            </div>
+                            
+                            <div class="col-12 mb-3">
+                                <label for="concepto" class="form-label">Concepto<span class="text-danger"> *</span></label>
+                                <select class="form-select" id="concepto" required>
+                                    <option selected disabled value="">Seleccione motivo de la transferencia</option>
+                                    <option value="1">Alquiler</option>
+                                    <option value="2">Aportes de capital</option>
+                                    <option value="3">Bienes registrables</option>
+                                    <option value="4">Cuota</option>
+                                    <option value="5">Expensas</option>
+                                    <option value="6">Factura</option>
+                                    <option value="7">Haberes</option>
+                                    <option value="8">Honorarios</option>
+                                    <option value="9">Operaciones inmobiliarias</option>
+                                    <option value="10">Préstamo</option>
+                                    <option value="11">Seguro</option>
+                                    <option value="12">Varios</option>
+                                </select>
+                                <div class="valid-feedback">Ok!</div>
+                                <div class="invalid-feedback">Por favor, seleccione una opción</div>
+                            </div>
+                            
+                            <div class="col-12 mb-3">
+                                <label for="referencia" class="form-label">Referencia</label>
+                                <input type="text" id="referencia" class="form-control" placeholder="Referencia" aria-label="Referencia (opcional)" aria-describedby="basic-addon1">
+                            </div>
+    
+                            <div class="d-grid col-6 mb-3 mx-auto">
+                                <button class="btn btn-primary" type="submit">Transferir</button>
+                            </div>
+                   
+                        
+                    </form>
+                    
+                </div>
+                
+            </div>
+
+            <div class="col-12 col-lg-6 d-none d-lg-block">
+                
+                <img src="assets/transf/89.png" class="img-fluid" alt="">
+                
+            </div>
+        </div>
+    </div>
