@@ -1,0 +1,23 @@
+.titulo {
+  font-family: Roboto;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  color: #4361ee;
+}
+
+.subtitulo {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+
+  color: #3a0ca3;
+}
+
+.central img {
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
