@@ -96,10 +96,17 @@
               "src/favicon.ico",
               "src/assets"
             ],
+<<<<<<< HEAD
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
+
             ],
             "scripts": []
+=======
+            "styles": ["node_modules/bootstrap/dist/css/bootstrap.css", "src/styles.css"],
+            "scripts": ["node_modules/bootstrap/dist/css/bootstrap.css"]
+>>>>>>> ef1eea9386c22dabb68c040985bec43010e9afce
           }
         }
       }
