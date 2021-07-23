@@ -6,10 +6,11 @@ import { RegistroComponent } from './home/registro/registro.component';
 import { TransferirDineroComponent } from './dashboard/pesos/transferir-dinero/transferir-dinero.component';
 import { ComprarCriptosComponent } from './dashboard/criptos/comprar-criptos/comprar-criptos.component';
 import { ConsultaSaldoComponent } from './dashboard/pesos/consulta-saldo/consulta-saldo.component';
+import { ComisionesVigentesComponent } from './dashboard/criptos/comisiones-vigentes/comisiones-vigentes.component';
 
 
 const routes: Routes = [
-    {path: 'login',
+  {path: 'login',
   component:LoginComponent,},
 
   {path:'',
@@ -30,6 +31,11 @@ component:ComprarCriptosComponent,
 
 {path: 'consultasaldo',
 component:ConsultaSaldoComponent,
+},
+
+
+{path:'comisionesvigentes',
+component:ComisionesVigentesComponent,
 }
 
 ];
