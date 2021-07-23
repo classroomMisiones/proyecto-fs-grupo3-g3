@@ -1,1 +1,42 @@
-<p>ingresar-dinero works!</p>
+<div class="container">
+    <div class="row align-items-center">
+
+        <div class="col-12 col-lg-6">
+        
+            <div class="card justify-center-center">
+                
+              <h2 class="text-center mb-6 fs-3">{{title}}</h2>
+
+                <form class="row g-3" >
+                
+
+                        <div class="col-12 mb-3">
+                        <label>Usuario</label>
+                        <input type="text" class="form-control" placeholder="usuario">
+                        </div>
+
+                        
+                        <div class="col-12 mb-3">
+                        <label>Ingresar monto </label>
+                        <input type="text" name=nombre class="form-control" placeholder="pesos">
+                            
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label>CVU</label>
+                            <input type="text" class="form-control" placeholder="numero">
+                           
+                        </div>
+
+                        <div class="d-grid col-3 mb-3 mx-auto">
+                           <input type="button" value="Aceptar" class="btn btn-primary" (click)="ingresar()">
+                        </div>
+                    
+                </form>
+                  <p *ngIf="registrado">{{mensaje}}</p>
+            </div>
+            
+    </div>
+</div>
+
+

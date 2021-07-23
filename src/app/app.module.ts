@@ -23,6 +23,7 @@ import { ComisionesVigentesComponent } from './dashboard/criptos/comisiones-vige
 import { OperacionesCriptosComponent } from './dashboard/criptos/operaciones-criptos/operaciones-criptos.component';
 import { LoginComponent } from './home/login/login.component';
 import { RegistroComponent } from './home/registro/registro.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { RegistroComponent } from './home/registro/registro.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
