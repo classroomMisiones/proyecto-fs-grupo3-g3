@@ -6,42 +6,22 @@ import { RegistroComponent } from './home/registro/registro.component';
 import { TransferirDineroComponent } from './dashboard/pesos/transferir-dinero/transferir-dinero.component';
 import { ComprarCriptosComponent } from './dashboard/criptos/comprar-criptos/comprar-criptos.component';
 import { ConsultaSaldoComponent } from './dashboard/pesos/consulta-saldo/consulta-saldo.component';
-import { ComisionesVigentesComponent } from './dashboard/criptos/comisiones-vigentes/comisiones-vigentes.component';
-
 
 const routes: Routes = [
-  {path: 'login',
-  component:LoginComponent,},
+  { path: 'login', component: LoginComponent },
 
-  {path:'',
-  component:CentralComponent,
-  pathMatch: 'full'},
+  { path: '', component: CentralComponent, pathMatch: 'full' },
 
-  {path: 'registro',
-  component:RegistroComponent,
+  { path: 'registro', component: RegistroComponent },
+  { path: 'transferir', component: TransferirDineroComponent },
 
-},
-  {path: 'transferir',
-  component:TransferirDineroComponent,
-},
+  { path: 'comprar', component: ComprarCriptosComponent },
 
-{path: 'comprar',
-component:ComprarCriptosComponent,
-},
-
-{path: 'consultasaldo',
-component:ConsultaSaldoComponent,
-},
-
-
-{path:'comisionesvigentes',
-component:ComisionesVigentesComponent,
-}
-
+  { path: 'consultasaldo', component: ConsultaSaldoComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

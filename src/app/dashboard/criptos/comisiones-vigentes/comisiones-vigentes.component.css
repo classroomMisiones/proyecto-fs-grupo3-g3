@@ -1,6 +1,6 @@
 .grid-container{
-  background:red;
+  background:rgb(134, 67, 67);
   display: grid;
-  grid-template-columns:90px 90px 90px 90px 90px;
+  grid-template-columns:80px 80px 80px 80px 80px;
   grid-template-rows: 40px 40px 40px 40px;
 }
