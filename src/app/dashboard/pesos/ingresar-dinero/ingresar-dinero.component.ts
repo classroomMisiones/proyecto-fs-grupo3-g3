@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ingresar-dinero.component.html',
   styleUrls: ['./ingresar-dinero.component.css']
 })
-export class IngresarDineroComponent implements OnInit {
+export class IngresarDineroComponent {
 
-  constructor() { }
+  title = 'Igresar Dinero';
+  mensaje='';
+  registrado=false;
 
-  ngOnInit(): void {
+  ingresar(){
+  this.registrado=true;  
+  this.mensaje="Transferencia de dinero realizada con éxito"
+
   }
 
 }
