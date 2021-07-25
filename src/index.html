@@ -6,7 +6,39 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+      $(document).ready(function(){           
+          $("#selectmonedas").change(function() {
+              var num = $(this).val();
+            
+              if(num == 1){
+                  valor = 'peso.png';
+              }
+              if(num == 2){
+                  valor = 'bitcoin.png';
+              }
+              if(num == 3){
+                  valor = 'ethereum.png';
+              }
+              if(num == 4){
+                  valor = 'dogecoin.png';
+              }
+              if(num == 5){
+                  valor = 'monero.png';
+              }
+            
+              $('#imgmoneda').prop("src", "assets/monedas/" + valor);
+          });           
+      });
+  </script>
+
 </head>
+
+
+
 <body>
   <app-root></app-root>
 </body>
