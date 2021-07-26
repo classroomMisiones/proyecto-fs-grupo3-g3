@@ -1,6 +1,17 @@
-.grid-container{
-  background:rgb(134, 67, 67);
-  display: grid;
-  grid-template-columns:80px 80px 80px 80px 80px;
-  grid-template-rows: 40px 40px 40px 40px;
+.table {
+  background: rgb(132, 137, 139);
+  margin: 5% auto;
+  width: 90%;
+}
+
+.comision {
+  color: black;
+  background: rgb(127, 165, 209);
+  padding: 10% auto;
+  text-align: center;
+  width: 100%;
+}
+.thead1 {
+  background: violet;
+  width: 90%;
 }
