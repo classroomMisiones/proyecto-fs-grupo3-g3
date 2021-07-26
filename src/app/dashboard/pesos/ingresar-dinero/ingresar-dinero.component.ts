@@ -4,9 +4,11 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-ingresar-dinero',
   templateUrl: './ingresar-dinero.component.html',
   styleUrls: ['./ingresar-dinero.component.css']
+ 
 })
-export class IngresarDineroComponent {
-
+export class IngresarDineroComponent implements OnInit{
+  constructor() { }
+  
   title = 'Igresar Dinero';
   mensaje='';
   registrado=false;
@@ -14,7 +16,10 @@ export class IngresarDineroComponent {
   ingresar(){
   this.registrado=true;  
   this.mensaje="Transferencia de dinero realizada con éxito"
-
+ 
   }
+  ngOnInit(): void {
+  }
+
 
 }
