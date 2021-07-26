@@ -1,13 +1,13 @@
 .card {
     padding: 30px 30px;
-    margin-top: 40px;
+    margin-top: 100px;
     margin-bottom: 40px;
     margin-left: 10px;
     margin-right: 10px;
     border: none ;
     box-shadow: 0 6px 12px 0 rgb(0 0 0 / 20%);
-    background-color:#6BACE9;
-    color:aliceblue;
+    background-color:#d6e8fa;
+    color:rgb(80, 101, 122);
     border-radius: 20px;
 }
 
