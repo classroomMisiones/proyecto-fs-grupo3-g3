@@ -1,0 +1,229 @@
+[33mcommit 972c591e1f8cc8d412d526257aec4bcb6871bde6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Gustavo <gustavomisio@yahoo.com.ar>
+Date:   Fri Jul 23 21:14:42 2021 -0300
+
+    Haciendo un routing de ingresar dinero
+
+[33mcommit 5eda9419cde3db19fe01b9c5e8d7db091715ea10[m
+Merge: 157bee2 9b56e71
+Author: Gustavo <gustavomisio@yahoo.com.ar>
+Date:   Fri Jul 23 20:15:16 2021 -0300
+
+    Merge branch 'master' of https://github.com/classroomMisiones/proyecto-fs-grupo3-g3
+
+[33mcommit 157bee258112b51de66413cdb51dc0a244845931[m
+Author: Gustavo <gustavomisio@yahoo.com.ar>
+Date:   Fri Jul 23 18:58:43 2021 -0300
+
+    primer commit
+
+[33mcommit 9b56e71e510bebff2446143b1b8e30071ebe0c53[m
+Author: Fabian <lordf00@gmail.com>
+Date:   Thu Jul 22 15:05:55 2021 -0300
+
+    Udate en comprar criptos y transferir dinero
+
+[33mcommit 1980d628c0ac2024cbf09164cc9e8018c447b8ab[m
+Merge: 05a1ff1 f655c06
+Author: Fabian <lordf00@gmail.com>
+Date:   Wed Jul 21 21:53:26 2021 -0300
+
+    Merge branch 'master' of https://github.com/classroomMisiones/proyecto-fs-grupo3-g3
+
+[33mcommit 05a1ff15298131ba31877d20ce3ec10b9fee87a7[m
+Author: Fabian <lordf00@gmail.com>
+Date:   Wed Jul 21 21:44:04 2021 -0300
+
+    Merge branch 'master' of https://github.com/classroomMisiones/proyecto-fs-grupo3-g3
+
+[33mcommit f655c061618d846998e32441bac8c72193288aa0[m
+Merge: e646468 c9a1ddd
+Author: perezman-code 730 <you@example.com>
+Date:   Wed Jul 21 19:15:39 2021 -0300
+
+    Merge branch 'master' of https://github.com/classroomMisiones/proyecto-fs-grupo3-g3
+
+[33mcommit e6464688c95a186e4781eca21dba6932b9f1887b[m
+Author: perezman-code 730 <you@example.com>
+Date:   Wed Jul 21 19:13:21 2021 -0300
+
+    Prueba de commit en consulta saldo
+
+[33mcommit c9a1ddd8848c769cb5dc8fbfe391d976139d550f[m
+Merge: 98c3a52 659abeb
+Author: Fabian <lordf00@gmail.com>
+Date:   Wed Jul 21 18:53:30 2021 -0300
+
+    Merge branch 'master' of https://github.com/classroomMisiones/proyecto-fs-grupo3-g3
+
+[33mcommit 659abebce1674e0886d150be4582b6e96d8fc5e4[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Wed Jul 21 15:18:49 2021 -0300
+
+    arreglando el footer html habia un <<<<<<< HEAD demás de los conflictos que tuve con el push
+
+[33mcommit 54ed8b1e2615566ff3968ee514f5008d71719793[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Wed Jul 21 15:17:55 2021 -0300
+
+    arreglando package.json y footer.component.html conflicto existente al hacer el anterior commit
+
+[33mcommit 4bb73475d39bb541a2aa6e1b4d544fb6d41b1dc1[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Wed Jul 21 15:10:58 2021 -0300
+
+    arreglando error en linea 104
+
+[33mcommit 6cd2bdeab78134d2f2fbf4d353f684b28e886837[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Wed Jul 21 15:05:31 2021 -0300
+
+    conflicto angular.json arreglado
+
+[33mcommit 77cc4f081207f07efe861f4c4c02d94748b08cfc[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Wed Jul 21 14:45:43 2021 -0300
+
+    subiendo de nuevo angular.json
+
+[33mcommit 204c9fc603e050c4b8997689febd0cdd78c6548a[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Wed Jul 21 14:44:53 2021 -0300
+
+    arreglando angular.json
+
+[33mcommit 98c3a52e71dc9e224122972cf2b55d813a020832[m
+Author: Marcelo E. Delgado <70522049+marceloedelgado@users.noreply.github.com>
+Date:   Wed Jul 21 14:39:00 2021 -0300
+
+    actualizado angular.json
+
+[33mcommit e028f7696d2393f29ca4934b0be55a96f2a1717f[m
+Merge: ae5f1af ef1eea9
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Wed Jul 21 14:28:51 2021 -0300
+
+    agregando archivos modificados angular.jason package-lock package.json y footerhome
+
+[33mcommit ae5f1aff0a59d0c90ccb58f9602498a2159a33ad[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Wed Jul 21 14:09:25 2021 -0300
+
+    commit con home navbar footer estilos y arreglos de bootstrap
+
+[33mcommit ef1eea9386c22dabb68c040985bec43010e9afce[m
+Author: Fabian <lordf00@gmail.com>
+Date:   Wed Jul 21 13:38:47 2021 -0300
+
+    Corregí responsive transferencias
+
+[33mcommit a9a4a51f73f75a91d5c2930ff2d659d6cb599862[m
+Author: Fabian <lordf00@gmail.com>
+Date:   Tue Jul 20 19:44:08 2021 -0300
+
+    Agregando validaciones
+
+[33mcommit d33bb42e0e1e0204dbe08b796f205ffd4ba3c47b[m
+Author: Fabian <lordf00@gmail.com>
+Date:   Mon Jul 19 19:49:38 2021 -0300
+
+    Aprolijando codigo
+
+[33mcommit 299d82cd82bc5f265cd0b2d03ba94e1cf70cc813[m
+Author: Fabian <lordf00@gmail.com>
+Date:   Mon Jul 19 19:46:06 2021 -0300
+
+    Codigo componente Transferencias
+
+[33mcommit 01d5bf17699cffbe6dd2197293ed0aee89e6f24b[m
+Author: perezman-code 730 <you@example.com>
+Date:   Wed Jul 14 11:20:10 2021 -0300
+
+    modifique le footer del home
+
+[33mcommit 42865cd4bc5dc5204451fb425055fffcc41a606f[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Tue Jul 13 18:01:01 2021 -0300
+
+    primer commit del proyecto
+
+[33mcommit aac671f8b3800a929dc7d5888ebb5a0bf5d395c1[m
+Author: Marcelo E. Delgado <70522049+marceloedelgado@users.noreply.github.com>
+Date:   Tue Jul 13 13:31:15 2021 -0300
+
+    Borrando directorio de prueba de Fabian
+    
+    Para limpiar el repo
+
+[33mcommit 6e98ace70419159b679a53a44ebcf4cb2a6d92e5[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Tue Jul 13 02:25:28 2021 -0300
+
+    corrigiendo la carpeta raiz del repositorio, eliminando carpeta ewallet-g3 que debe ser creada al momento de clonar con git clone url ewallet-g3 como carpeta de destino dentro del proyecto una vez creado
+
+[33mcommit e1c0e006dc15e7eb471f7b2f29f77150319b67ce[m
+Author: Fabian R. Pavón <86329467+Fabian-ISPC@users.noreply.github.com>
+Date:   Tue Jul 13 00:26:15 2021 -0300
+
+    Update central.component.html
+
+[33mcommit 7b92a454370796d3fa75fffef8606a5ede83b3dc[m
+Author: Fabian <lordf00@gmail.com>
+Date:   Tue Jul 13 00:07:44 2021 -0300
+
+    Prueba commit Fabian
+
+[33mcommit 25d589ea6299cf7132ac9853eb4d17ff930f5189[m
+Merge: 0b27645 802e72a
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Mon Jul 12 19:26:01 2021 -0300
+
+    actualizando
+
+[33mcommit 802e72a32ea8233902bef2805455ae03956cb45f[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Mon Jul 12 18:35:47 2021 -0300
+
+    limpiando repositorio
+
+[33mcommit c1f44834b501236dd1ff0dc27a3a4783fe1e22da[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Mon Jul 12 18:34:39 2021 -0300
+
+    limpiando repositorio de archivos de historias de usuarios viejas
+
+[33mcommit e2be45a72624a0e46b1130be23809b6def4b57bf[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Mon Jul 12 18:26:17 2021 -0300
+
+    se han eliminado archivos innecesarios para limpiar el repositorio
+
+[33mcommit 0b27645e83083bd6ade3419a5e738e49cbd19a52[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Mon Jul 12 18:05:40 2021 -0300
+
+    primer commit del proyecto ewallet del Grupo 3, estructuras basicas de componentes del proyecto
+
+[33mcommit 908372325954eedf6718a362e70aab58d2ef5026[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Thu Jun 24 19:17:12 2021 -0300
+
+    agreado DESCRIPCION - CRITERIOS DE ACEPTACION - TAMAÑO
+
+[33mcommit 3d65dee61809e9422243645164908f73a58ad09d[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Tue Jun 22 21:34:48 2021 -0300
+
+    se actualiza el archivo hu-crear-perfil-usuario.txt
+
+[33mcommit 2bf269a492149759708a368f45e462c16fb458a1[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Tue Jun 22 21:31:18 2021 -0300
+
+    historia de usuario crear perfil usuario
+
+[33mcommit ea635bf318418b4a8e1a5293a2994c7fc271d5c9[m
+Author: marceloedelgado <marceloedelgado@gmail.com>
+Date:   Tue Jun 22 20:35:19 2021 -0300
+
+    primer historia de usuario Wallet - Ingresar Dinero

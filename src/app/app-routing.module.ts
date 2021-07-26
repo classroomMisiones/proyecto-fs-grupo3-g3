@@ -7,6 +7,7 @@ import { TransferirDineroComponent } from './dashboard/pesos/transferir-dinero/t
 import { ComprarCriptosComponent } from './dashboard/criptos/comprar-criptos/comprar-criptos.component';
 import { ConsultaSaldoComponent } from './dashboard/pesos/consulta-saldo/consulta-saldo.component';
 
+
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
 
@@ -18,6 +19,8 @@ const routes: Routes = [
   { path: 'comprar', component: ComprarCriptosComponent },
 
   { path: 'consultasaldo', component: ConsultaSaldoComponent },
+
+  
 ];
 
 @NgModule({
