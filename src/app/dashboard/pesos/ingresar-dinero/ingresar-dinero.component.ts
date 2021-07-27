@@ -1,25 +1,34 @@
-import { Component, OnInit } from '@angular/core';
 
-@Component({
-  selector: 'app-ingresar-dinero',
-  templateUrl: './ingresar-dinero.component.html',
-  styleUrls: ['./ingresar-dinero.component.css']
- 
+import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+
+  @Component({
+    selector: 'app-ingresar-dinero',
+    templateUrl: './ingresar-dinero.component.html',
+    styleUrls: ['./ingresar-dinero.component.css']
 })
-export class IngresarDineroComponent implements OnInit{
-  constructor() { }
+export class IngresarDineroComponent{
+   form!: FormGroup;
+
+  constructor(private formBuilder: FormBuilder 
+    ){
+   this.buildForm();
+   };
+
+
+ private buildForm() {
+ this.form = this.formBuilder.group({
+ usuario: ['', [Validators.required]],
+ cvu: ['', [Validators.required, Validators.maxLength(80)]],
+ ingresar: ['', [Validators.required]],
+  });
   
-  title = 'Igresar Dinero';
-  mensaje='';
-  registrado=false;
-
-  ingresar(){
-  this.registrado=true;  
-  this.mensaje="Transferencia de dinero realizada con éxito"
- 
+   }
+  save(event: Event) {
+    event.preventDefault();
+    if(this.form.valid){
+      const value = this.form.value;
+      console.log(value);
+    }
   }
-  ngOnInit(): void {
-  }
-
-
 }

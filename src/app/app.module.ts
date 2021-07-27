@@ -13,7 +13,7 @@ import { PrincipalComponent } from './dashboard/principal/principal.component';
 import { PesosComponent } from './dashboard/pesos/pesos.component';
 import { CriptosComponent } from './dashboard/criptos/criptos.component';
 import { ConsultaSaldoComponent } from './dashboard/pesos/consulta-saldo/consulta-saldo.component';
-import { IngresarDineroComponent } from './dashboard/pesos/ingresar-dinero/ingresar-dinero.component';
+import { IngresarDineroComponent,} from './dashboard/pesos/ingresar-dinero/ingresar-dinero.component';
 import { RetirarDineroComponent } from './dashboard/pesos/retirar-dinero/retirar-dinero.component';
 import { TransferirDineroComponent } from './dashboard/pesos/transferir-dinero/transferir-dinero.component';
 import { OperacionesPesosComponent } from './dashboard/pesos/operaciones-pesos/operaciones-pesos.component';
@@ -23,7 +23,7 @@ import { ComisionesVigentesComponent } from './dashboard/criptos/comisiones-vige
 import { OperacionesCriptosComponent } from './dashboard/criptos/operaciones-criptos/operaciones-criptos.component';
 import { LoginComponent } from './home/login/login.component';
 import { RegistroComponent } from './home/registro/registro.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -53,6 +53,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
