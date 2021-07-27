@@ -20,7 +20,6 @@ const routes: Routes = [
 
   { path: 'comprar', component: ComprarCriptosComponent },
 
-<<<<<<< HEAD
 {path: 'comprar',
 component:ComprarCriptosComponent,
 },
@@ -36,12 +35,11 @@ component:DashboardComponent,
 {path: 'sidebar',
 component:SidebarComponent,}
 
-=======
   { path: 'consultasaldo', component: ConsultaSaldoComponent },
 >>>>>>> 2beb27a5653c3f694cf0a703a6c1d232549f980b
 
   
-];
+];  
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
