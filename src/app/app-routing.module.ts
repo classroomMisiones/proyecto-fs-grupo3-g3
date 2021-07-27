@@ -6,6 +6,8 @@ import { RegistroComponent } from './home/registro/registro.component';
 import { TransferirDineroComponent } from './dashboard/pesos/transferir-dinero/transferir-dinero.component';
 import { ComprarCriptosComponent } from './dashboard/criptos/comprar-criptos/comprar-criptos.component';
 import { ConsultaSaldoComponent } from './dashboard/pesos/consulta-saldo/consulta-saldo.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 
 
 const routes: Routes = [
@@ -30,7 +32,15 @@ component:ComprarCriptosComponent,
 
 {path: 'consultasaldo',
 component:ConsultaSaldoComponent,
-}
+},
+
+{path: 'dashboard',
+component:DashboardComponent,
+},
+
+{path: 'sidebar',
+component:SidebarComponent,}
+
 
 ];
 
