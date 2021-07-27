@@ -11,21 +11,16 @@ import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 
 
 const routes: Routes = [
-    {path: 'login',
-  component:LoginComponent,},
+  { path: 'login', component: LoginComponent },
 
-  {path:'',
-  component:CentralComponent,
-  pathMatch: 'full'},
+  { path: '', component: CentralComponent, pathMatch: 'full' },
 
-  {path: 'registro',
-  component:RegistroComponent,
+  { path: 'registro', component: RegistroComponent },
+  { path: 'transferir', component: TransferirDineroComponent },
 
-},
-  {path: 'transferir',
-  component:TransferirDineroComponent,
-},
+  { path: 'comprar', component: ComprarCriptosComponent },
 
+<<<<<<< HEAD
 {path: 'comprar',
 component:ComprarCriptosComponent,
 },
@@ -41,11 +36,15 @@ component:DashboardComponent,
 {path: 'sidebar',
 component:SidebarComponent,}
 
+=======
+  { path: 'consultasaldo', component: ConsultaSaldoComponent },
+>>>>>>> 2beb27a5653c3f694cf0a703a6c1d232549f980b
 
+  
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
