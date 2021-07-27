@@ -33,7 +33,7 @@ component:DashboardComponent,
 },
 
 {path: 'sidebar',
-component:SidebarComponent,}
+component:SidebarComponent,},
 
   { path: 'consultasaldo', 
   component:ConsultaSaldoComponent},
