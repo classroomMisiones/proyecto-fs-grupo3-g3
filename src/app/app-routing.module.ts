@@ -20,9 +20,6 @@ const routes: Routes = [
 
   { path: 'comprar', component: ComprarCriptosComponent },
 
-{path: 'comprar',
-component:ComprarCriptosComponent,
-},
 
 {path: 'consultasaldo',
 component:ConsultaSaldoComponent,
@@ -35,8 +32,7 @@ component:DashboardComponent,
 {path: 'sidebar',
 component:SidebarComponent,},
 
-  { path: 'consultasaldo', 
-  component:ConsultaSaldoComponent},
+  
 
   
 ];  
