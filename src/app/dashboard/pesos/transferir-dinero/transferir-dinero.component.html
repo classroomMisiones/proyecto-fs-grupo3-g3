@@ -8,41 +8,56 @@
                     
                     <h5 class="text-center mb-4 fs-4">TRANSFERENCIAS</h5>
 
-                    <form class="row g-1 needs-validation" novalidate>
+                    <form [formGroup]="formulario" (ngSubmit)="verificar()" class="row g-1">
                     
 
                             <div class="col-12 mb-3">
-                                <label for="validationCustom01" class="form-label">CVU/CBU<span class="text-danger"> *</span></label>
-                                <input type="text" class="form-control" name="cbu" id="validationCustom01" placeholder="Destino" required>
-                                <div class="valid-feedback">Ok!</div>
-                                <div class="invalid-feedback">Por favor, complete el campo</div>
+                                <label for="destino" class="form-label">Enviar dinero a:<span class="text-danger"> *</span></label>
+                                <input type="text" class="form-control" id="destino" placeholder="CVU/CBU" formControlName="destino">
+                                
+                                <div *ngIf="destino?.valid"></div>
+                                <div *ngIf="destino?.invalid && (destino?.dirty || destino?.touched)">
+                                    <div *ngIf="destino?.hasError('required')">
+                                    <p>Este campo es requerido.</p>
+                                    </div>
+                                    <div *ngIf="destino?.hasError('minlength') || destino?.hasError('maxlength')">
+                                        <p>El CBU o CVU debe tener 22 digitos.</p>
+                                    </div>
+                                </div>
+                                
                             </div>
                             
                             <div class="col-12 mb-3">
-                                <label for="Moneda" class="form-label">Moneda<span class="text-danger"> *</span></label>
-                                <select class="form-select" id="moneda" required>
-                                    <option selected disabled value="">Seleccione tipo de moneda...</option>
+                                <label for="moneda" class="form-label">Moneda<span class="text-danger"> *</span></label>
+                                <select class="form-select" id="moneda" formControlName="moneda">
+                                    <option selected disabled value="">Seleccione una moneda</option>
                                     <option value="peso">Pesos</option>
                                     <option value="bitcoin">Bitcoin</option>
                                     <option value="ethereum">Ethereum</option>
                                     <option value="dogecoin">Dogecoin</option>
                                     <option value="monero">Monero</option>
                                 </select>
-                                <div class="valid-feedback">Ok!</div>
-                                <div class="invalid-feedback">Por favor, seleccione una opción</div>
+
+                                <div *ngIf="moneda?.valid"></div>
+                                <div *ngIf="moneda?.invalid && (moneda?.dirty || moneda?.touched)">
+                                    <div *ngIf="moneda?.hasError('required')">
+                                    <p>Seleccione una opción.</p>
+                                    </div>
+                                </div>
+
                             </div>
                             
                             <div class="col-12 mb-3">
-                                <label for="Moneda" class="form-label">Monto a transferir<span class="text-danger"> *</span></label>
-                                <input type="text" class="form-control" placeholder="Monto" required>
+                                <label for="monto" class="form-label">Monto a transferir<span class="text-danger"> *</span></label>
+                                <input type="text" class="form-control" placeholder="Importe" formControlName="monto">
                                 <div class="valid-feedback">Ok!</div>
                                 <div class="invalid-feedback">Por favor, complete el campo</div>
                             </div>
                             
                             <div class="col-12 mb-3">
                                 <label for="concepto" class="form-label">Concepto<span class="text-danger"> *</span></label>
-                                <select class="form-select" id="concepto" required>
-                                    <option selected disabled value="">Seleccione motivo de la transferencia</option>
+                                <select class="form-select" id="concepto" formControlName="concepto">
+                                    <option selected disabled value="">Seleccione una opción</option>
                                     <option value="1">Alquiler</option>
                                     <option value="2">Aportes de capital</option>
                                     <option value="3">Bienes registrables</option>
@@ -62,7 +77,7 @@
                             
                             <div class="col-12 mb-3">
                                 <label for="referencia" class="form-label">Referencia</label>
-                                <input type="text" id="referencia" class="form-control" placeholder="Referencia" aria-label="Referencia (opcional)" aria-describedby="basic-addon1">
+                                <input type="text" id="referencia" class="form-control" placeholder="Referencia" formControlName="referencia">
                             </div>
     
                             <div class="d-grid col-6 mb-3 mx-auto">
@@ -78,7 +93,7 @@
 
             <div class="col-12 col-lg-6 d-none d-lg-block">
                 
-                <img src="assets/transf/89.png" class="img-fluid" alt=""> 
+                <img src="assets/Transf/89.png" class="img-fluid" alt=""> 
                 
                  
             </div>
