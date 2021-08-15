@@ -24,6 +24,7 @@ import { OperacionesCriptosComponent } from './dashboard/criptos/operaciones-cri
 import { LoginComponent } from './home/login/login.component';
 import { RegistroComponent } from './home/registro/registro.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DashboardRoutingModule } from './dashboard/dashboard.routing';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    DashboardRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
