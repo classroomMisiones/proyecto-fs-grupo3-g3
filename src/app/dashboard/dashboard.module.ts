@@ -1,6 +1,8 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from "@angular/router";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComisionesVigentesComponent } from "./criptos/comisiones-vigentes/comisiones-vigentes.component";
 import { ComprarCriptosComponent } from "./criptos/comprar-criptos/comprar-criptos.component";
 import { OperacionesCriptosComponent } from "./criptos/operaciones-criptos/operaciones-criptos.component";
@@ -15,12 +17,15 @@ import { PrincipalComponent } from "./principal/principal.component";
 
 @NgModule({
     imports: [
+        BrowserModule,
         CommonModule,
         RouterModule,
-        DashboardRoutingModule
+        DashboardRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
     ],
     exports: [
-        /* ComisionesVigentesComponent,
+/*         ComisionesVigentesComponent,
         ComprarCriptosComponent,
         OperacionesCriptosComponent,
         VenderCriptosComponent,
@@ -29,11 +34,11 @@ import { PrincipalComponent } from "./principal/principal.component";
         OperacionesCriptosComponent,
         RetirarDineroComponent,
         TransferirDineroComponent,
-        PrincipalComponent,
-        DashboardComponent */
+        PrincipalComponent, */
+        
     ],
     declarations: [
-        ComisionesVigentesComponent,
+/*         ComisionesVigentesComponent,
         ComprarCriptosComponent,
         OperacionesCriptosComponent,
         VenderCriptosComponent,
@@ -43,8 +48,8 @@ import { PrincipalComponent } from "./principal/principal.component";
         RetirarDineroComponent,
         TransferirDineroComponent,
         PrincipalComponent,
-        DashboardComponent
+        DashboardComponent, */
     ]
   })
 
-  export class AppModule { }
+  export class DashModule { }

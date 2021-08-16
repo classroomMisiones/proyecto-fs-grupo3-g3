@@ -12,19 +12,20 @@ import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { PrincipalComponent } from './dashboard/principal/principal.component';
 import { PesosComponent } from './dashboard/pesos/pesos.component';
 import { CriptosComponent } from './dashboard/criptos/criptos.component';
-import { ConsultaSaldoComponent } from './dashboard/pesos/consulta-saldo/consulta-saldo.component';
+
 import { IngresarDineroComponent,} from './dashboard/pesos/ingresar-dinero/ingresar-dinero.component';
 import { RetirarDineroComponent } from './dashboard/pesos/retirar-dinero/retirar-dinero.component';
 import { TransferirDineroComponent } from './dashboard/pesos/transferir-dinero/transferir-dinero.component';
 import { OperacionesPesosComponent } from './dashboard/pesos/operaciones-pesos/operaciones-pesos.component';
-import { ComprarCriptosComponent } from './dashboard/criptos/comprar-criptos/comprar-criptos.component';
-import { VenderCriptosComponent } from './dashboard/criptos/vender-criptos/vender-criptos.component';
+
+
 import { ComisionesVigentesComponent } from './dashboard/criptos/comisiones-vigentes/comisiones-vigentes.component';
 import { OperacionesCriptosComponent } from './dashboard/criptos/operaciones-criptos/operaciones-criptos.component';
 import { LoginComponent } from './home/login/login.component';
 import { RegistroComponent } from './home/registro/registro.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardRoutingModule } from './dashboard/dashboard.routing';
+import { ComprarCriptosComponent } from './dashboard/criptos/comprar-criptos/comprar-criptos.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +39,11 @@ import { DashboardRoutingModule } from './dashboard/dashboard.routing';
     PrincipalComponent,
     PesosComponent,
     CriptosComponent,
-    ConsultaSaldoComponent,
+    ComprarCriptosComponent,
     IngresarDineroComponent,
     RetirarDineroComponent,
     TransferirDineroComponent,
     OperacionesPesosComponent,
-    ComprarCriptosComponent,
-    VenderCriptosComponent,
     ComisionesVigentesComponent,
     OperacionesCriptosComponent,
     LoginComponent,
@@ -56,6 +55,7 @@ import { DashboardRoutingModule } from './dashboard/dashboard.routing';
     FormsModule,
     ReactiveFormsModule,
     DashboardRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
