@@ -6,9 +6,9 @@
         <form [formGroup]="form" (ngSubmit)="save($event)">
           <div class="row g-3">
             <div class="col-12 mb-3">
-              Ingreso de Dinero últimas 24 horas: <br />
+              Ingreso de Dinero: <br />
               <input
-                type="text"
+                type="number"
                 formControlName="ingreso"
                 class="form-control"
                 placeholder="pesos"
@@ -16,9 +16,9 @@
             </div>
 
             <div class="col-12 mb-3">
-              Transferencia de Dinero últimas 24 horas: <br />
+              Transferencia de Dinero: <br />
               <input
-                type="text"
+                type="number"
                 formControlName="transferencia"
                 class="form-control"
                 placeholder="pesos"
@@ -28,7 +28,7 @@
             <div class="col-12 mb-3">
               Saldo Actual Disponible: <br />
               <input
-                type="text"
+                type="number"
                 formControlName="saldo"
                 class="form-control"
                 placeholder="pesos"
