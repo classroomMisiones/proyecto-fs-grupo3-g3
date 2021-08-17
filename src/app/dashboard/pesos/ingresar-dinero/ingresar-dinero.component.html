@@ -6,7 +6,7 @@
       
        <div class="card justify-center-center">
               
-        <h2 class="text-center mb-6 fs-3">Ingresar Dinero</h2>
+        <h2 class="text-center mb-6 fs-3">INGRESAR DINERO</h2>
           <form [formGroup]='form' (ngSubmit)="save($event)">
             
             <div class="row g-3" >
@@ -42,7 +42,7 @@
               </div>
 
               <div class="d-grid col-3 mb-3 mx-auto">
-                <button type="submit"[disabled]="form.invalid" class="btn btn-primary">Guardar </button> 
+                <button type="submit"[disabled]="form.invalid" class="btn btn-primary">Enviar </button> 
               </div>
                   
               </div>
@@ -55,7 +55,7 @@
 </div>
 </div>
 
-<pre>estado del formulario:{{form.valid}} 
+<!-- <pre>estado del formulario:{{form.valid}} 
   status:{{form.status}}
   </pre>
   <br>
@@ -63,5 +63,5 @@
     {{form.value | json}}
   </pre>
   
-  
+   -->
 
