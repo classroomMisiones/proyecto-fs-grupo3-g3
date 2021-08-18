@@ -1,75 +1,91 @@
 
-
-  
     <div class="row">
-      <div class="col-1 shadow">
-        
+      <div class="col-1 d-flex border-end">
 
-                <div class="flex-grow-0 p-3 bg-white" style="width: 110px;">
-                  <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none">
-                    <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-                    <span class="fs-5 fw-semibold">Dashboard</span>
-                  </a>
-                  <ul class="list-unstyled ps-0">
-                    <li class="mb-1">
-                      <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
-                        Criptos
-                      </button>
-                      <div class="collapse" id="home-collapse">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                          
-                          <li><a href="#" class="link-dark rounded border-bottom" routerLink="comprar">Comprar</a></li>
-                          <li><a href="#" class="link-dark rounded border-bottom" routerLink="vender">Vender</a></li>
-                          <li><a href="#" class="link-dark rounded border-bottom" routerLink="opcripto">Ultimas operaciones</a></li>
-                          <li><a href="#" class="link-dark rounded">Swap</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class=" my-3"></li>
-                    <li class="mb-1">
-                      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                        Pesos
-                      </button>
-                      <div class="collapse" id="dashboard-collapse">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                          
-                          <li><a href="#" class="link-dark rounded border-bottom" routerLink="ingresardinero">Ingresar dinero</a></li>
-                          <li><a href="#" class="link-dark rounded border-bottom" routerLink="oppesos">Ultimas operaciones</a></li>
-                          <li><a href="#" class="link-dark rounded border-bottom" routerLink="retirar">Retirar dinero</a></li>
-                          <li><a href="#" class="link-dark rounded " routerLink="transferir">Transferir</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="border-top my-3"></li>
-                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-dark rounded"  routerLink="Comisiones">Comisiones</a></li>
-                        <li><a href="#" class="link-dark rounded"  routerLink="consultasaldo">Saldos</a></li>
-                      </ul>
-                    <li class="border-top my-3"></li>
-                    <li class="mb-1">
-                      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-                        Mi Cuenta
-                      </button>
-                      <div class="collapse" id="account-collapse">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                          
-                          <li><a href="#" class="link-dark rounded">Perfil</a></li>
-                          <li><a href="#" class="link-dark rounded">Configuraciones</a></li>
-                          <li><a href="#" class="link-dark rounded">Salir</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-        
+        <div class="d-flex flex-column text-center" style="width: 6rem; height: 50rem;">
+          
+          <div class="container justify-content-center py-3">
+            <img src="../../assets/icons/coins.png" class="img-fluid mx-auto d-block py-2" width="90%" alt="">
+            <span class="text-primary">
+              <b>Cryptos</b>
+            </span>
+          </div>
+
+          <ul class="btn-toggle-nav nav nav-pills nav-flush flex-column text-Left">
+            <li class="nav-item">
+              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="comprar" aria-current="page" title="Comprar" data-bs-toggle="tooltip" data-bs-placement="right">
+                <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"/></svg> -->
+                Comprar
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="vender" title="Vender" data-bs-toggle="tooltip" data-bs-placement="right">
+                <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"/></svg> -->
+                Vender
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="opcripto" title="Operaciones" data-bs-toggle="tooltip" data-bs-placement="right">
+                <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"/></svg> -->
+                Operaciones
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" link-primary nav-link py-1  border-top" title="Swap" data-bs-toggle="tooltip" data-bs-placement="right">
+                <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"/></svg> -->
+                Swap
+              </a>
+            </li>
+            
+          </ul>
+
+          <div class="container-fluid py-3">
+            <img src="../../assets/icons/peso.png" class="img-fluid ml-auto d-block py-2" width="90%" alt="">
+            <span class="text-primary">
+              <b>Pesos</b>
+            </span>
+          </div>
+
+          <ul class="btn-toggle-nav nav nav-pills nav-flush flex-column text-Left">
+            <li class="nav-item">
+              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="ingresardinero" aria-current="page" title="Comprar" data-bs-toggle="tooltip" data-bs-placement="right">
+                <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"/></svg> -->
+                Ingresar<br>dinero 
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="retirar" title="Vender" data-bs-toggle="tooltip" data-bs-placement="right">
+                <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"/></svg> -->
+                Retirar <br>dinero
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="oppesos" title="Operaciones" data-bs-toggle="tooltip" data-bs-placement="right">
+                <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"/></svg> -->
+                Operaciones
+              </a>
+            </li>
+            <li>
+              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="transferir" title="Swap" data-bs-toggle="tooltip" data-bs-placement="right">
+                <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"/></svg> -->
+                Transferir
+              </a>
+            </li>
+            
+          </ul>
+
+        </div>
   
       </div>
-      <div class="col-1">
-        <div class="b-example-divider"></div>
+        
+      <div class="col-11 d-flex">
+        <div class="container-fluid">
+          <div class=" justify-content-around align-items-center">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
       </div>
-      <div class="col-10">
-        <router-outlet></router-outlet>
-      </div>
+
     </div>
   
   

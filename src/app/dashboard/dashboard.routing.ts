@@ -19,7 +19,8 @@ const routes: Routes = [
     {path: 'dashboard', component: DashboardComponent, 
         children: [
 
-            {path: '', component: PrincipalComponent},        
+            {path: '', component: PrincipalComponent},  
+            {path: 'principal', component: PrincipalComponent},       
             {path: 'comisiones', component: ComisionesVigentesComponent},
             {path: 'opcripto', component:OperacionesCriptosComponent},        
             {path: 'vender', component:VenderCriptosComponent},        

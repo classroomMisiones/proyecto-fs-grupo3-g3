@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
 $(document).ready(function () {
   $("#selectmoneda").change(function () {
     var num = $(this).val();
@@ -22,4 +22,12 @@ $(document).ready(function () {
     $("#imgmoneda").prop("src", "assets/monedas/" + valor);
   })
 });
-</script>
+
+/* global bootstrap: false */
+(function () {
+  'use strict'
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+    new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+})()

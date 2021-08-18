@@ -2,3 +2,33 @@
     vertical-align:bottom;
     border:0;
 }
+.card {
+    padding: 30px 30px;
+    margin-top: 20px;
+    margin-bottom: 210px;
+    margin-left: 20px;
+    margin-right: 10px;
+    border: none ;
+    /* box-shadow: 0 6px 12px 0 rgb(0 0 0 / 20%); */
+    /* background-color:#d6e8fa; */
+    color:rgb(80, 101, 122);
+    border-radius: 20px;
+  }
+
+  .titulo {
+    font-family: Roboto;
+    font-style: normal;
+    /* display: flex; */
+    /* align-items: center; */
+    color: #4361ee;
+  }
+  
+  .subtitulo {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+  
+    color: #3a0ca3;
+  }
