@@ -1,1 +1,42 @@
-<p>login works!</p>
+
+<div class="container-fluid center-in-display">
+    <div class="dialog modal-login">
+        <div class="modal-content">
+            <div class="modal-header">				
+                <h4 class="modal-title">Iniciar Sesión</h4>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
+			</div>
+			<div class="modal-body">
+				<form action="" method="post">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"></i>  </span>
+							<input type="text" class="form-control" name="username" placeholder="Usuario" required="required">
+						</div>
+					</div>
+					<div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+							<input type="text" class="form-control" name="password" placeholder="Password" required="required">
+						</div>
+					</div>
+                    <div class="center-in-container">
+                        <div class="form-group">
+                            <a class="nav-link" routerLink="../dashboard">
+                                <button class="btn btn-primary btn-block btn-lg">Entrar</button>
+                            </a>
+                        </div>
+                    </div>
+					<p class="hint-text"><a href="#">Olvidaste tu contraseña?</a></p>
+				</form>
+			</div>
+			<div class="modal-footer">No tienes una cuenta? <a href="#">Registrate</a></div>
+		</div>
+	</div>
+</div>     
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

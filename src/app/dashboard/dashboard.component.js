@@ -1,33 +1,32 @@
 
-$(document).ready(function () {
-  $("#selectmoneda").change(function () {
-    var num = $(this).val();
+window.addEventListener('DOMContentLoaded', event => {
 
-    if (num == 1) {
-      valor = "peso_bn.png";
-    }
-    if (num == 2) {
-      valor = "bitcoin_bn.png";
-    }
-    if (num == 3) {
-      valor = "ethereum_bn.png";
-    }
-    if (num == 4) {
-      valor = "dogecoin_bn.png";
-    }
-    if (num == 5) {
-      valor = "monero_bn.png";
-    }
+  // Toggle the side navigation
+  const sidebarToggle = document.body.querySelector('#sidebarToggle');
+  if (sidebarToggle) {
+      // Uncomment Below to persist sidebar toggle between refreshes
+      // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+      //     document.body.classList.toggle('sb-sidenav-toggled');
+      // }
+      sidebarToggle.addEventListener('click', event => {
+          event.preventDefault();
+          document.body.classList.toggle('sb-sidenav-toggled');
+          localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+      });
+  }
 
-    $("#imgmoneda").prop("src", "assets/monedas/" + valor);
-  })
 });
 
+
+
+
 /* global bootstrap: false */
-(function () {
+/* (function () {
   'use strict'
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
   tooltipTriggerList.forEach(function (tooltipTriggerEl) {
     new bootstrap.Tooltip(tooltipTriggerEl)
   })
 })()
+
+ */
