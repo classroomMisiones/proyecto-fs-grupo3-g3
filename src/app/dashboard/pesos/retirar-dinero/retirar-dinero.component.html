@@ -1,1 +1,67 @@
-<p>retirar-dinero works!</p>
+<div class="container">
+    <div class="row align-items-center">
+  
+      <div class="col-12 col-lg-6">
+        
+         <div class="card justify-center-center">
+                
+          <h2 class="text-center mb-6 fs-3">RETIRAR DINERO</h2>
+            <form [formGroup]='form' (ngSubmit)="save($event)">
+              
+              <div class="row g-3" >
+                 
+                <div class="col-12 mb-3">
+                
+                  Usuario: <br> 
+                  <input type="text" formControlName="usuario"
+                  class="form-control" placeholder="usuario"
+                  [class.is-invalid]="usuarioNovalido">
+                  <small *ngIf="usuarioNovalido" class="text-danger"> ingrese el correo</small> 
+                  
+                  
+                </div>
+  
+                        
+                <div class="col-12 mb-3">
+                  
+                   CVU: <br> 
+                   <input type="number" formControlName="cvu" 
+                   class="form-control" placeholder="numero"
+                   [class.is-invalid]="cvuNovalido">
+                   <small *ngIf="cvuNovalido" class="text-danger"> ingrese 22 dígitos</small>
+              
+                </div>
+  
+                <div class="col-12 mb-3">
+                  retirar: <br>
+                  <input type="number" formControlName="retirar" 
+                  class="form-control" placeholder="pesos"
+                  [class.is-invalid]="retirarNovalido">
+                  <small *ngIf="retirarNovalido" class="text-danger"> monto máximo 20000 pesos</small>
+                </div>
+  
+                <div class="d-grid col-3 mb-3 mx-auto">
+                  <button type="submit"[disabled]="form.invalid" class="btn btn-primary">Enviar </button> 
+                </div>
+                    
+                </div>
+                  
+              </form>
+  
+                  <!-- <p *ngIf="registrado">{{mensaje}} (click)="ingresar()"</p> -->
+          </div>
+    </div>  
+  </div>
+  </div>
+  
+  <!-- <pre>estado del formulario:{{form.valid}} 
+    status:{{form.status}}
+    </pre>
+    <br>
+    <pre>
+      {{form.value | json}}
+    </pre>
+    
+     -->
+  
+  
