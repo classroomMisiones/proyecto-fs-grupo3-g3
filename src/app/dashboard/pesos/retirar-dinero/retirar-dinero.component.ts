@@ -13,15 +13,15 @@ export class RetirarDineroComponent {
     this.buildForm();
    };
 
-//    get usuarioNovalido(){
-//     return this.form.get('usuario')?.invalid && this.form.get ('usuario')?.touched
-//   }
-//    get cvuNovalido(){
-//    return this.form.get('cvu')?.invalid && this.form.get ('cvu')?.touched
-//    }
-//   get retirarNovalido(){
-//   return this.form.get('retirar')?.invalid && this.form.get ('retirar')?.touched
-//    }
+   get usuarioNovalido(){
+     return this.form.get('usuario')?.invalid && this.form.get ('usuario')?.touched
+   }
+    get cvuNovalido(){
+    return this.form.get('cvu')?.invalid && this.form.get ('cvu')?.touched
+    }
+   get retirarNovalido(){
+   return this.form.get('retirar')?.invalid && this.form.get ('retirar')?.touched
+   }
 
 
 
