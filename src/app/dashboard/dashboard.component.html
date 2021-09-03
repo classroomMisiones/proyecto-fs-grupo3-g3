@@ -1,116 +1,92 @@
-<div class="d-flex" id="wrapper">
+
+<div class="side-navbar border-end d-flex justify-content-between flex-wrap flex-column active-nav" id="sidebar">
   <!-- Sidebar-->
-  <div class="border-end bg-white" id="sidebar-wrapper">
-    
-      <div class="list-group list-group-flush">
-
-        <div class="container py-3">
-            <img src="../../assets/icons/coins.png" class="img-fluid d-block py-2" width="30%" alt="">
-            <span class="text-primary">
-              <b>Cryptos</b>
-            </span>
-          </div>
-
-          <ul class="btn-toggle-nav nav nav-pills nav-flush flex-column text-Left">
-            <li class="nav-item">
-              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="comprar" aria-current="page" title="Comprar" data-bs-toggle="tooltip" data-bs-placement="right">
-                
-                Comprar
-              </a>
-            </li>
-            <li>
-              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="vender" title="Vender" data-bs-toggle="tooltip" data-bs-placement="right">
-                
-                Vender
-              </a>
-            </li>
-            <li>
-              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="opcripto" title="Operaciones" data-bs-toggle="tooltip" data-bs-placement="right">
-                
-                Operaciones
-              </a>
-            </li>
-            <li>
-              <a href="#" class=" link-primary nav-link py-1  border-top" title="Swap" data-bs-toggle="tooltip" data-bs-placement="right">
-                
-                Swap
-              </a>
-            </li>
-            
-          </ul>
-
-          <div class="container-fluid py-3">
-            <img src="../../assets/icons/peso.png" class="img-fluid ml-auto d-block py-2" width="30%" alt="">
-            <span class="text-primary">
-              <b>Pesos</b>
-            </span>
-          </div>
-
-          <ul class="btn-toggle-nav nav nav-pills nav-flush flex-column text-Left">
-            <li class="nav-item">
-              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="ingresardinero" aria-current="page" title="Comprar" data-bs-toggle="tooltip" data-bs-placement="right">
-                <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"/></svg> -->
-                Ingresar<br>dinero 
-              </a>
-            </li>
-            <li>
-              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="retirar" title="Vender" data-bs-toggle="tooltip" data-bs-placement="right">
-                <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"/></svg> -->
-                Retirar <br>dinero
-              </a>
-            </li>
-            <li>
-              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="oppesos" title="Operaciones" data-bs-toggle="tooltip" data-bs-placement="right">
-                <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"/></svg> -->
-                Operaciones
-              </a>
-            </li>
-            <li>
-              <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="transferir" title="Swap" data-bs-toggle="tooltip" data-bs-placement="right">
-                <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"/></svg> -->
-                Transferir
-              </a>
-            </li>
-            
-          </ul>
-      </div>
-  </div>
-  <!-- Page content wrapper-->
-  <div id="page-content-wrapper">
-      <!-- Top navigation-->
-      <nav class="navbar navbar-expand-lg navbar-lightborder-bottom">
-          <div class="container-fluid">
-              <button class="btn btn-primary" id="sidebarToggle">Menu</button>
-              <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                      <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#!">Action</a>
-                              <a class="dropdown-item" href="#!">Another action</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#!">Something else here</a>
-                          </div>
-                      </li>
-                  </ul>
-              </div> -->
-          </div>
-      </nav>
+    <nav class="bg-white">
       
-      <div class="container-fluid">
-        <div class="container-fluid">
-            <div class=" justify-content-around align-items-center">
-              <router-outlet></router-outlet>
+        <div class="list-group list-group-flush">
+
+          <div class="container py-3">
+              <img src="../../assets/icons/coins.png" class="img-fluid d-block py-2" width="30%" alt="">
+              <span class="text-primary">
+                <b>Cryptos</b>
+              </span>
             </div>
+
+            <ul class="btn-toggle-nav nav nav-pills nav-flush flex-column">
+              <li class="nav-item">
+                <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="comprar" aria-current="page" title="Comprar" data-bs-toggle="tooltip" data-bs-placement="right">
+                  
+                  Comprar
+                </a>
+              </li>
+              <li>
+                <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="vender" title="Vender" data-bs-toggle="tooltip" data-bs-placement="right">
+                  
+                  Vender
+                </a>
+              </li>
+              <li>
+                <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="opcripto" title="Operaciones" data-bs-toggle="tooltip" data-bs-placement="right">
+                  
+                  Operaciones
+                </a>
+              </li>
+              <li>
+                <a href="#" class=" link-primary nav-link py-1  border-top border-bottom" title="Swap" data-bs-toggle="tooltip" data-bs-placement="right">
+                  
+                  Swap
+                </a>
+              </li>
+              
+            </ul>
+
+            <div class="container-fluid py-3">
+              <img src="../../assets/icons/peso.png" class="img-fluid ml-auto d-block py-2" width="30%" alt="">
+              <span class="text-primary">
+                <b>Pesos</b>
+              </span>
+            </div>
+
+            <ul class="btn-toggle-nav nav nav-pills nav-flush flex-column text-Left">
+              <li class="nav-item">
+                <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="ingresardinero" aria-current="page" title="Comprar" data-bs-toggle="tooltip" data-bs-placement="right">
+                  <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"/></svg> -->
+                  Ingresar dinero 
+                </a>
+              </li>
+              <li>
+                <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="retirar" title="Vender" data-bs-toggle="tooltip" data-bs-placement="right">
+                  <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"/></svg> -->
+                  Retirar dinero
+                </a>
+              </li>
+              <li>
+                <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="oppesos" title="Operaciones" data-bs-toggle="tooltip" data-bs-placement="right">
+                  <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"/></svg> -->
+                  Operaciones
+                </a>
+              </li>
+              <li>
+                <a href="#" class=" link-primary nav-link py-1  border-top border-bottom" routerLink="transferir" title="Swap" data-bs-toggle="tooltip" data-bs-placement="right">
+                  <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"/></svg> -->
+                  Transferir
+                </a>
+              </li>
+              
+            </ul>
         </div>
+    </nav>
+    
+</div>
+  
+<div class="p-4 my-container active-cont">
+  <button class="btn btn-primary" id="menu-btn">Menu</button>
+  <div class="container-fluid">
+      <div class=" justify-content-around align-items-center">
+        <router-outlet></router-outlet>
       </div>
   </div>
 </div>
 
 <script src="dashboard.component.js"></script>
 
-<!-- Bootstrap core JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
