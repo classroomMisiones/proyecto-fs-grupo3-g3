@@ -1,5 +1,5 @@
 .side-navbar {
-  width: 180px;
+  width: 120px;
   height: 100%;
   position: fixed;
   margin-left: -300px;
@@ -17,6 +17,7 @@
 .my-container {
   transition: 0.4s;
   overflow: hidden;
+  height: 100vh;
 }
 
 .active-nav {
@@ -25,7 +26,7 @@
 
 /* for main section */
 .active-cont {
-  margin-left: 180px;
+  margin-left: 115px;
 }
 
 /* #menu-btn {
@@ -33,3 +34,7 @@
   color: #fff;
   margin-left: -62px;
 } */
+
+.cont-dash{
+  margin-left:1px;
+}
