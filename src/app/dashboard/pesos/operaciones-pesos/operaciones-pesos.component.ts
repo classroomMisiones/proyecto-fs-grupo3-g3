@@ -17,16 +17,18 @@ export class OperacionesPesosComponent{
  private buildForm() {
  this.form = this.formBuilder.group({
  ingreso: ['', [Validators.required]],
- transferencia: ['', [Validators.required, Validators.maxLength(80)]],
+ transferencia: ['', [Validators.required]],
  saldo: ['', [Validators.required]],
+
   });
   
    }
   save(event: Event) {
     event.preventDefault();
-    if(this.form.valid){
-      const value = this.form.value;
-      console.log(value);
-    }
-  }
+     if(this.form.valid){
+       const value = this.form.value;
+       console.log(value);
+     }
+
+}
 }

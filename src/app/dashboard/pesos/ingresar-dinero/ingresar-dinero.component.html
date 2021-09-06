@@ -6,7 +6,7 @@
       
        <div class="card justify-center-center">
               
-        <h2 class="text-center mb-6 fs-3">Ingresar Dinero</h2>
+        <h2 class="text-center mb-6 fs-3">INGRESAR DINERO</h2>
           <form [formGroup]='form' (ngSubmit)="save($event)">
             
             <div class="row g-3" >
@@ -15,7 +15,10 @@
               
                 Usuario: <br> 
                 <input type="text" formControlName="usuario"
-                class="form-control" placeholder="usuario">
+                class="form-control" placeholder="usuario"
+                [class.is-invalid]="usuarioNovalido">
+                <small *ngIf="usuarioNovalido" class="text-danger"> ingrese el correo</small> 
+                
                 
               </div>
 
@@ -23,20 +26,23 @@
               <div class="col-12 mb-3">
                 
                  CVU: <br> 
-                 <input type="text" formControlName="cvu" 
-                 class="form-control" placeholder="numero">
-                
+                 <input type="number" formControlName="cvu" 
+                 class="form-control" placeholder="numero"
+                 [class.is-invalid]="cvuNovalido">
+                 <small *ngIf="cvuNovalido" class="text-danger"> ingrese 22 dígitos</small>
             
               </div>
 
               <div class="col-12 mb-3">
                 ingresar: <br>
-                <input type="text" formControlName="ingresar" 
-                class="form-control" placeholder="pesos">
+                <input type="number" formControlName="ingresar" 
+                class="form-control" placeholder="pesos"
+                [class.is-invalid]="ingresarNovalido">
+                <small *ngIf="ingresarNovalido" class="text-danger"> monto máximo 20000 pesos</small>
               </div>
 
               <div class="d-grid col-3 mb-3 mx-auto">
-                <button type="submit"[disabled]="form.invalid" class="btn btn-primary">Guardar </button> 
+                <button type="submit"[disabled]="form.invalid" class="btn btn-primary">Enviar </button> 
               </div>
                   
               </div>
@@ -49,5 +55,13 @@
 </div>
 </div>
 
-
+<!-- <pre>estado del formulario:{{form.valid}} 
+  status:{{form.status}}
+  </pre>
+  <br>
+  <pre>
+    {{form.value | json}}
+  </pre>
+  
+   -->
 

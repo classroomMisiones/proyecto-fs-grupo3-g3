@@ -1,17 +1,43 @@
-.table {
-  background: rgb(132, 137, 139);
-  margin: 5% auto;
-  width: 90%;
+h1 {
+  background-color: darkcyan;
+  height: 60px;
+  text-align: center;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid rgb(158, 125, 158);
 }
 
-.comision {
-  color: black;
-  background: rgb(127, 165, 209);
-  padding: 10% auto;
-  text-align: center;
-  width: 100%;
+thead th:nth-child(1) {
+  background-color: rgb(34, 204, 223);
+  text-align: right;
+  width: 30%;
 }
-.thead1 {
-  background: violet;
-  width: 90%;
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th,
+td {
+  padding: 20px;
+}
+img {
+  max-height: 100px;
+  max-width: 100px;
+  padding: 10px;
+  border-image: repeat;
+}
+tr {
+  text-align: center;
 }
