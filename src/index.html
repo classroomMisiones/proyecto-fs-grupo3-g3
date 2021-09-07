@@ -7,55 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <app-root></app-root>
 
     <script>
-                
       $(document).ready(function () {
-          $("#selectmoneda").change(function () {
-            var num = $(this).val();
-        
-            if (num == 1) {
-              valor = "peso_bn.png";
-            }
-            if (num == 2) {
-              valor = "bitcoin_bn.png";
-            }
-            if (num == 3) {
-              valor = "ethereum_bn.png";
-            }
-            if (num == 4) {
-              valor = "dogecoin_bn.png";
-            }
-            if (num == 5) {
-              valor = "monero_bn.png";
-            }
-        
-            $("#imgmoneda").prop("src", "assets/monedas/" + valor);
-          })
-        });
-        
-      </script>
-      
-      <script>
-        
-        
-        window.onload=function(){
-          var menu_btn = document.querySelector("#menu-btn");
-          var sidebar = document.querySelector("#sidebar");
-          var container = document.querySelector(".my-container");
-          menu_btn.addEventListener('click', () => {
-            sidebar.classList.toggle("active-nav");
-            container.classList.toggle("active-cont");
-          });
+        $("#selectmoneda").change(function () {
+          var num = $(this).val();
+
+          if (num == 1) {
+            valor = "peso_bn.png";
+          }
+          if (num == 2) {
+            valor = "bitcoin_bn.png";
+          }
+          if (num == 3) {
+            valor = "ethereum_bn.png";
+          }
+          if (num == 4) {
+            valor = "dogecoin_bn.png";
+          }
+          if (num == 5) {
+            valor = "monero_bn.png";
           }
 
-      </script>
+          $("#imgmoneda").prop("src", "assets/monedas/" + valor);
+        });
+      });
+    </script>
 
+    <script>
+      // Para ocultar el sidebar del dashboard
+      window.onload = function () {
+        var menu_btn = document.querySelector("#menu-btn");
+        var sidebar = document.querySelector("#sidebar");
+        var container = document.querySelector(".my-container");
+        menu_btn.addEventListener("click", () => {
+          sidebar.classList.toggle("active-nav");
+          container.classList.toggle("active-cont");
+        });
+      };
+    </script>
   </body>
 </html>
