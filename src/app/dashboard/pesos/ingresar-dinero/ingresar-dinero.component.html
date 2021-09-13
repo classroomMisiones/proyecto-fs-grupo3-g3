@@ -10,36 +10,31 @@
           <form [formGroup]='form' (ngSubmit)="save($event)">
             
             <div class="row g-3" >
-               
-              <div class="col-12 mb-3">
               
-                Usuario: <br> 
-                <input type="text" formControlName="usuario"
-                class="form-control" placeholder="usuario"
-                [class.is-invalid]="usuarioNovalido">
-                <small *ngIf="usuarioNovalido" class="text-danger"> ingrese el correo</small> 
-                
-                
-              </div>
-
-                      
               <div class="col-12 mb-3">
                 
-                 CVU: <br> 
-                 <input type="number" formControlName="cvu" 
-                 class="form-control" placeholder="numero"
-                 [class.is-invalid]="cvuNovalido">
-                 <small *ngIf="cvuNovalido" class="text-danger"> ingrese 22 dígitos</small>
-            
-              </div>
+                CVU/CBU: <br> 
+                <input type="number" formControlName="cvu" 
+                class="form-control" placeholder="numero"
+                [class.is-invalid]="cvuNovalido">
+                <small *ngIf="cvuNovalido" class="text-danger"> ingrese 22 dígitos</small>
+           
+             </div>
+             <div class="col-12 mb-3">
+                codigo: <br> 
+                <input type="number" formControlName="codigo"
+                class="form-control" placeholder="numero"
+                [class.is-invalid]="codigoNovalido">
+                <small *ngIf="codigoNovalido" class="text-danger"> ingrese codigo de seguridad</small> 
+               </div>
 
-              <div class="col-12 mb-3">
-                ingresar: <br>
-                <input type="number" formControlName="ingresar" 
-                class="form-control" placeholder="pesos"
-                [class.is-invalid]="ingresarNovalido">
-                <small *ngIf="ingresarNovalido" class="text-danger"> monto máximo 20000 pesos</small>
-              </div>
+             <div class="col-12 mb-3">
+               ingresar: <br>
+               <input type="number" formControlName="ingresar" 
+               class="form-control" placeholder="pesos"
+               [class.is-invalid]="ingresarNovalido">
+               <small *ngIf="ingresarNovalido" class="text-danger"> monto máximo 20000 pesos</small>
+             </div>
 
               <div class="d-grid col-3 mb-3 mx-auto">
                 <button type="submit"[disabled]="form.invalid" class="btn btn-primary">Enviar </button> 

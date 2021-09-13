@@ -15,24 +15,26 @@ export class IngresarDineroComponent{
    this.buildForm();
    };
 
-   get usuarioNovalido(){
-    return this.form.get('usuario')?.invalid && this.form.get ('usuario')?.touched
-  }
    get cvuNovalido(){
-   return this.form.get('cvu')?.invalid && this.form.get ('cvu')?.touched
-   }
-  get ingresarNovalido(){
-  return this.form.get('ingresar')?.invalid && this.form.get ('ingresar')?.touched
-   }
+    return this.form.get('cvu')?.invalid && this.form.get ('cvu')?.touched
+    }
+    get codigoNovalido(){
+     return this.form.get('codigo')?.invalid && this.form.get ('ucodigo')?.touched
+     }
+   get ingresarNovalido(){
+   return this.form.get('ingresar')?.invalid && this.form.get ('ingresar')?.touched
+    }
 
 
 
- private buildForm() {
- this.form = this.formBuilder.group({
- usuario: ['', [Validators.required,Validators.pattern ('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
- cvu: ['', [Validators.required]],
- ingresar: ['', [Validators.required]],
-  });
+
+   private buildForm() {
+    this.form = this.formBuilder.group({
+    
+    cvu: ['', [Validators.required, Validators.min(1000000000000000000000),Validators.max(9999999999999999999999)]],
+    codigo: ['', [Validators.required, Validators.min(100), Validators.min(999),  ]],
+    ingresar: ['', [Validators.required, Validators.min(100), Validators.max(20000)]],
+     });
   
    }
   save(event: Event) {
