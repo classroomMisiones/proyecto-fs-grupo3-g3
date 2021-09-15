@@ -19,7 +19,7 @@ export class IngresarDineroComponent{
     return this.form.get('cvu')?.invalid && this.form.get ('cvu')?.touched
     }
     get codigoNovalido(){
-     return this.form.get('codigo')?.invalid && this.form.get ('ucodigo')?.touched
+     return this.form.get('codigo')?.invalid && this.form.get ('codigo')?.touched
      }
    get ingresarNovalido(){
    return this.form.get('ingresar')?.invalid && this.form.get ('ingresar')?.touched
@@ -32,7 +32,7 @@ export class IngresarDineroComponent{
     this.form = this.formBuilder.group({
     
     cvu: ['', [Validators.required, Validators.min(1000000000000000000000),Validators.max(9999999999999999999999)]],
-    codigo: ['', [Validators.required, Validators.min(100), Validators.min(999),  ]],
+    codigo: ['', [Validators.required, Validators.min(100), Validators.max(999)]],
     ingresar: ['', [Validators.required, Validators.min(100), Validators.max(20000)]],
      });
   
@@ -45,3 +45,5 @@ export class IngresarDineroComponent{
     }
   }
 }
+
+// 
