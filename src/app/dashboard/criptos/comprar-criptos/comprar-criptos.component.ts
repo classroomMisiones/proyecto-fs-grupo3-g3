@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms'
 
 
-
 @Component({
   selector: 'app-comprar-criptos',
   templateUrl: './comprar-criptos.component.html',
