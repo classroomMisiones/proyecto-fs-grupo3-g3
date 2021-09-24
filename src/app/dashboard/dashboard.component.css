@@ -1,5 +1,5 @@
 .side-navbar {
-  width: 120px;
+  width: 145px;
   height: 100%;
   position: fixed;
   margin-left: -300px;
@@ -26,7 +26,7 @@
 
 /* for main section */
 .active-cont {
-  margin-left: 115px;
+  margin-left: 145px;
 }
 
 /* #menu-btn {
