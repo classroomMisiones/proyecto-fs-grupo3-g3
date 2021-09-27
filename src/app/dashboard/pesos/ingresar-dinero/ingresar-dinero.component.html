@@ -13,15 +13,15 @@
               
               <div class="col-12 mb-3">
                 
-                CVU/CBU: <br> 
-                <input type="number" formControlName="cvu" 
+                Alias/CBU: <br> 
+                <input type="text" formControlName="cvu" 
                 class="form-control" placeholder="numero"
                 [class.is-invalid]="cvuNovalido">
                 <small *ngIf="cvuNovalido" class="text-danger"> ingrese 22 dígitos</small>
            
              </div>
              <div class="col-12 mb-3">
-                codigo: <br> 
+                codigo de seguridad: <br> 
                 <input type="number" formControlName="codigo"
                 class="form-control" placeholder="numero"
                 [class.is-invalid]="codigoNovalido">
