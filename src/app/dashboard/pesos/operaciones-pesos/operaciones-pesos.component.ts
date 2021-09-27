@@ -12,13 +12,14 @@ export class OperacionesPesosComponent{
     ){
    this.buildForm();
    };
-
+   get cvuNovalido(){
+    return this.form.get('cvu')?.invalid && this.form.get ('cvu')?.touched
+    }
 
  private buildForm() {
  this.form = this.formBuilder.group({
- ingreso: ['', [Validators.required]],
- transferencia: ['', [Validators.required]],
- saldo: ['', [Validators.required]],
+ cvu: ['', [Validators.required, Validators.minLength(22),Validators.maxLength(22)]],
+ saldo: ['',],
 
   });
   
