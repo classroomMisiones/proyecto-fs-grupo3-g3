@@ -31,7 +31,7 @@ export class IngresarDineroComponent{
    private buildForm() {
     this.form = this.formBuilder.group({
     
-    cvu: ['', [Validators.required, Validators.maxLength(22)]],
+    cvu: ['', [Validators.required, Validators.minLength(22),Validators.maxLength(22)]],
     codigo: ['', [Validators.required, Validators.min(100), Validators.max(999)]],
     ingresar: ['', [Validators.required, Validators.min(100), Validators.max(50000)]],
      });

@@ -15,25 +15,25 @@
                 
                 Alias/CBU: <br> 
                 <input type="text" formControlName="cvu" 
-                class="form-control" placeholder="numero"
+                class="form-control" placeholder="Alias/CBU"
                 [class.is-invalid]="cvuNovalido">
                 <small *ngIf="cvuNovalido" class="text-danger"> ingrese 22 dígitos</small>
            
              </div>
              <div class="col-12 mb-3">
-                codigo de seguridad: <br> 
+                Código de seguridad: <br> 
                 <input type="number" formControlName="codigo"
                 class="form-control" placeholder="numero"
                 [class.is-invalid]="codigoNovalido">
-                <small *ngIf="codigoNovalido" class="text-danger"> ingrese codigo de seguridad</small> 
+                <small *ngIf="codigoNovalido" class="text-danger"> ingrese código de seguridad de la tarjeta</small> 
                </div>
 
              <div class="col-12 mb-3">
-               ingresar: <br>
+               Ingresar pesos: <br>
                <input type="number" formControlName="ingresar" 
                class="form-control" placeholder="pesos"
                [class.is-invalid]="ingresarNovalido">
-               <small *ngIf="ingresarNovalido" class="text-danger"> monto máximo 20000 pesos</small>
+               <small *ngIf="ingresarNovalido" class="text-danger"> monto máximo 50000 pesos</small>
              </div>
 
               <div class="d-grid col-3 mb-3 mx-auto">
