@@ -6,21 +6,28 @@
       
        <div class="card justify-center-center">
               
-        <h2 class="text-center mb-6 fs-3">INGRESAR DINERO</h2>
+        <h4 class="text-center mb-1 fs-3">INGRESAR DINERO</h4>
           <form [formGroup]='form' (ngSubmit)="save($event)">
             
-            <div class="row g-3" >
+            <div class="row g-1" >
               
-              <div class="col-12 mb-3">
-                
-                Alias/CBU: <br> 
-                <input type="text" formControlName="cvu" 
-                class="form-control" placeholder="Alias/CBU"
-                [class.is-invalid]="cvuNovalido">
-                <small *ngIf="cvuNovalido" class="text-danger"> ingrese 22 dígitos</small>
-           
+              <div class="col-12 mb-1">        
+                Numero de tarjeta: <br> 
+                <input type="text" formControlName="tarjeta" 
+                class="form-control" placeholder="numero"
+                [class.is-invalid]="tarjetaNovalido">
+                <small *ngIf="tarjetaNovalido" class="text-danger"> ingrese su número de tarjeta</small>
              </div>
-             <div class="col-12 mb-3">
+
+             <div class="col-12 mb-1">        
+              Vencimiento: <br> 
+              <input type="text" formControlName="vencimiento" 
+              class="form-control" placeholder="numero"
+              [class.is-invalid]="vencimientoNovalido">
+              <small *ngIf="vencimientoNovalido" class="text-danger"> ingrese el mes y año 00/0000</small>
+             </div>
+
+             <div class="col-12 mb-1">
                 Código de seguridad: <br> 
                 <input type="number" formControlName="codigo"
                 class="form-control" placeholder="numero"
@@ -28,7 +35,23 @@
                 <small *ngIf="codigoNovalido" class="text-danger"> ingrese código de seguridad de la tarjeta</small> 
                </div>
 
-             <div class="col-12 mb-3">
+               <div class="col-12 mb-1">
+                Nombre: <br> 
+                <input type="text" formControlName="nombre"
+                class="form-control" placeholder="nombre"
+                [class.is-invalid]="nombreNovalido">
+                <small *ngIf="nombreNovalido" class="text-danger"> ingrese su nombre</small> 
+               </div>
+
+               <div class="col-12 mb-1">
+                Apellido: <br> 
+                <input type="text" formControlName="apellido"
+                class="form-control" placeholder="apellido"
+                [class.is-invalid]="apellidoNovalido">
+                <small *ngIf="apellidoNovalido" class="text-danger"> ingrese su apellido</small> 
+               </div>
+
+             <div class="col-12 mb-1">
                Ingresar pesos: <br>
                <input type="number" formControlName="ingresar" 
                class="form-control" placeholder="pesos"
