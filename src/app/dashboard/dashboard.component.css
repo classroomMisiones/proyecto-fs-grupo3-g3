@@ -17,7 +17,7 @@
 .my-container {
   transition: 0.4s;
   overflow: hidden;
-  height: 100vh;
+  height: 88vh;
 }
 
 .active-nav {
@@ -29,12 +29,15 @@
   margin-left: 145px;
 }
 
-/* #menu-btn {
-  background-color: #100901;
+#menu-btn {
+  
   color: #fff;
-  margin-left: -62px;
-} */
+  margin-left: 155;
+}
 
 .cont-dash{
-  margin-left:1px;
+  /* text-align:center; */
+  display: flex;
+  /* align-items: center; */
+  justify-content: center
 }

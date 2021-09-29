@@ -3,13 +3,15 @@ import { Component, OnInit } from '@angular/core';
 // import { BrowserModule } from '@angular/platform-browser';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 
+declare var showhidesidebar: any;
+
 @Component({
   selector: 'app-vender-criptos',
   templateUrl: './vender-criptos.component.html',
   styleUrls: ['./vender-criptos.component.css']
 })
 export class VenderCriptosComponent implements OnInit {
- 
+  instanceLib: any;
 
   createFormGroup() {
     return new FormGroup ({
@@ -26,6 +28,8 @@ export class VenderCriptosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+/*     console.log("hola");
+    this.instanceLib = showhidesidebar(); */
   }
 
 

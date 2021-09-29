@@ -1,56 +1,52 @@
 
-
-<div class="container justify-center-center">
-    <div class="row align-items-center">
+<div class="container">
+    <div class="row">
         
         <div class="col-12 col-lg-6">
             
-            <div class="card">
+            <h5 class="text-center mb-4 fs-4">VENDER CRIPTOMONEDAS</h5>
+            
+            <form [formGroup]="formulario" (ngSubmit)="verificar()" class="row g-1">
                 
-                <h5 class="text-center mb-4 fs-4">VENDER CRIPTOMONEDAS</h5>
-                
-                <form [formGroup]="formulario" (ngSubmit)="verificar()" class="row g-1">
-                    
-                    
-                    <div class="col-12">
-                        <div class="row">
-                            <label for="selectmoneda" class="form-label">Qué cripto querés vender?<span class="text-danger"> *</span></label>
-                            <div class="col-10">
-                                <div class="col-12 mb-3">
-                                    <select class="form-select"  id="selectmoneda" formControlName="selectmoneda">
-                                        <option selected disabled value="">Seleccione una opción</option>
-                                        <option value="2">Bitcoin</option>
-                                        <option value="3">Ethereum</option>
-                                        <option value="4">Dogecoin</option>
-                                        <option value="5">Monero</option>
-                                    </select>
-                    
-                                    <div class="row">
-                                        <div class="col-11">
-                                            <div *ngIf="selectmoneda?.valid"></div>
-                                            <div *ngIf="selectmoneda?.invalid && (selectmoneda?.dirty || selectmoneda?.touched)">
-                                                <p *ngIf="selectmoneda?.hasError('required')">Este campo es requerido.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-1 texto-transparente">
-                                            S
-                                        </div>
-                                    </div>
-                    
+                <div class="row text-Left">
+                    <label for="selectmoneda" class="form-label text-Left">Qué cripto querés vender?<span class="text-danger"> *</span></label>
+                    <div class="row">
+                        <div class="col-12">
+
+                            <div class="col-12 mb-3">
+                                <select  class="form-select icons" id="selectmoneda" formControlName="selectmoneda">
+                                    <option selected disabled value="">Seleccione una opción</option>
+                                    <option value="2" data-icon="assets/monedas/bitcoin_bn.png">Bitcoin</option>
+                                    <option value="3" data-icon="assets/monedas/ethereum_bn.png">Ethereum</option>
+                                    <option value="4" data-icon="assets/monedas/dogecoin_bn.png">Dogecoin</option>
+                                    <option value="5" data-icon="assets/monedas/monero_bn.png">Monero</option>
+                                </select>            
+                            </div>
+
+                            <div class="col-11">
+                                <div *ngIf="selectmoneda?.valid"></div>
+                                <div *ngIf="selectmoneda?.invalid && (selectmoneda?.dirty || selectmoneda?.touched)">
+                                    <p *ngIf="selectmoneda?.hasError('required')">Este campo es requerido.</p>
                                 </div>
                             </div>
-                            <div class="col-2">
-                                <img class="mx-auto d-block" id="imgmoneda" width="40" src="assets/monedas/blank.png"/>
+                            <div class="col-1 texto-transparente">
+                                S
                             </div>
+                            
+                        </div>
+                        <div class="col-1">
+                            <img class="mx-auto d-block" id="imgmoneda" width="40" src="assets/monedas/blank.png"/>
                         </div>
                     </div>
-                                                
-                    <div class="col-12 mb-3">
+                </div>
+                                            
+                <div class="row">
+                    <div class="col">
                         <label for="monto" class="form-label">Monto a vender<span class="text-danger"> *</span></label>
                         <input type="text" class="form-control"  id="monto" placeholder="Monto" formControlName="monto">
                         <div class="valid-feedback">Ok!</div>
                         <div class="invalid-feedback">Por favor, complete el campo</div>
-
+    
                         <div *ngIf="monto?.valid"></div>
                         <div *ngIf="monto?.invalid && (monto?.dirty || monto?.touched)">
                             <div *ngIf="monto?.hasError('required')">
@@ -60,27 +56,28 @@
                                 <p>El monto debe ser mayor a cero.</p>
                             </div>
                         </div>
-
                     </div>
 
-                    <div class="d-grid col-6 mx-auto">
-                        <button class="btn btn-primary" type="submit">Comprar</button>
-                    </div>
-               
-                    
-                </form>
+                </div>
+
+                <div class="d-grid col-6 mx-auto">
+                    <button class="btn btn-primary" type="submit">Vender</button>
+                </div>
                 
-            </div>
+            </form>
             
         </div>
 
         <div class="col-12 col-lg-6 d-none d-lg-block">
             
-            <img src="assets/comp-cripto/aaa.png" class="img-fluid" alt="">
+            <img src="assets/comp-cripto/aaa.png" class="img-rsve" alt="">
             
         </div>
     </div>
-</div>
 
 
-<!-- <script src="dashboard.component.js"></script> -->
+<!--     <script>
+        $(document).ready(function(){
+        $('select').formSelect();
+        });
+    </script> -->
