@@ -1,5 +1,3 @@
-
-
 <div class="container justify-center-center">
     <div class="row align-items-center">
         
@@ -13,18 +11,16 @@
                 
                     <div class="col-12">
                         <div class="row">
-                            <label for="selectmoneda" class="form-label">Moneda a comprar<span class="text-danger"> *</span></label>
+                            <label for="selectmoneda" class="form-label">Qué cripto querés comprar?<span class="text-danger"> *</span></label>
                             <div class="col-10">
                                 <div class="col-12 mb-3">
                                     <select class="form-select"  id="selectmoneda" formControlName="selectmoneda">
-                                        <option selected disabled value="">Seleccione el tipo de moneda</option>
+                                        <option selected disabled value="">Seleccione una opción</option>
                                         <option value="2">Bitcoin</option>
                                         <option value="3">Ethereum</option>
                                         <option value="4">Dogecoin</option>
                                         <option value="5">Monero</option>
-                                    </select>
-
-                                    
+                                    </select>                                   
                                 </div>
                             </div>
                             <div class="col-2">
@@ -32,6 +28,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="col text-danger">
                             <div *ngIf="selectmoneda?.valid"></div>
@@ -56,7 +53,6 @@
                                 <p>El monto debe ser mayor a cero.</p>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="d-grid col-6 mx-auto">

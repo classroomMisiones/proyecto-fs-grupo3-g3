@@ -1,6 +1,8 @@
 .dash-img {
   vertical-align: bottom;
   border: 0;
+  width: 89%;
+  height: auto;
 }
 /* .stl {
     padding: 30px 30px;

@@ -1,18 +1,17 @@
 /* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"); */
 
 .card {
-  padding: 30px 30px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border: none ;
-  background-color:#d6e8fa;
-  color:rgb(80, 101, 122);
- 
+    padding: 30px 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none ;
+    /* box-shadow: 0 6px 12px 0 rgb(0 0 0 / 20%); */
+    background-color:#d6e8fa;
+    color:rgb(80, 101, 122);
+    border-radius: 6px;
 }
-
-
 
 button {
     padding: 5px 15px;
@@ -24,15 +23,6 @@ button {
     font-weight: 300
 }
 
-/* .container{
-    margin-top: 20px;
-} */
-
-/* .texto-transparente{
-    color: transparent;
-  } */
-
-  .img-rsve {
-    width: 100%;
-    height: auto;
-  }
+.container{
+  margin-top: 20px;
+}

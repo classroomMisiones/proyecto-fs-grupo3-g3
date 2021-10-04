@@ -1,90 +1,81 @@
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="shadow" id="sidebar-wrapper"  [ngClass]="status ? 'hide' : 'show'">
+       
+    <div class="sidebar-heading">Pesos</div>
 
-<div class="side-navbar border-end d-flex justify-content-between flex-wrap flex-column active-nav" id="sidebar">
-  <!-- Sidebar-->
-    <nav class="bg-white">
-      
-        <div class="list-group list-group-flush">
+    <div class="list-group list-group-flush">
+      <a href="#" class="list-group-item list-group-item-action bg-transparent" routerLink="ingresardinero">Ingresar dinero</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent" routerLink="retirar">Retirar dinero</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent" routerLink="oppesos">Operaciones</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent" routerLink="transferir">Transferir</a>
+    </div>
 
-          <div class="container py-3">
-              <img src="../../assets/icons/coins.png" class="img-fluid d-block py-2" width="50%" alt="">
-              <span class="text-primary">
-                <b>Cryptos</b>
-              </span>
-            </div>
+    <div class="sidebar-heading">Cryptos</div>
 
-            <ul class="btn-toggle-nav nav nav-pills nav-flush flex-column">
-              <li class="nav-item">
-                <a href="#" class=" link-primary nav-link py-0  border-top" routerLink="comprar" aria-current="page" title="Comprar" data-bs-toggle="tooltip" data-bs-placement="right">
-                  
-                  Comprar
-                </a>
-              </li>
-              <li>
-                <a href="#" class=" link-primary nav-link py-0  border-top" routerLink="vender" title="Vender" data-bs-toggle="tooltip" data-bs-placement="right">
-                  
-                  Vender
-                </a>
-              </li>
-              <li>
-                <a href="#" class=" link-primary nav-link py-0  border-top" routerLink="opcripto" title="Operaciones" data-bs-toggle="tooltip" data-bs-placement="right">
-                  
-                  Operaciones
-                </a>
-              </li>
-              <li>
-                <a href="#" class=" link-primary nav-link py-0  border-top border-bottom" title="Swap" data-bs-toggle="tooltip" data-bs-placement="right">
-                  
-                  Swap
-                </a>
-              </li>
-              
-            </ul>
+    <div class="list-group list-group-flush">
+      <a href="#" class="list-group-item list-group-item-action bg-transparent" routerLink="comprar">Comprar</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent" routerLink="vender">Vender</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent" routerLink="opcripto">Operaciones</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent" routerLink="swap">Swap</a>
+    </div>
 
-            <div class="container-fluid py-3">
-              <img src="../../assets/icons/peso.png" class="img-fluid ml-auto d-block py-2" width="50%" alt="">
-              <span class="text-primary">
-                <b>Pesos</b>
-              </span>
-            </div>
+    <div class="sidebar-heading">Opciones</div>
 
-            <ul class="btn-toggle-nav nav nav-pills nav-flush flex-column text-Left">
-              <li class="nav-item">
-                <a href="#" class=" link-primary nav-link py-0  border-top" routerLink="ingresardinero" aria-current="page" title="Comprar" data-bs-toggle="tooltip" data-bs-placement="right">
-                  <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"/></svg> -->
-                  Ingresar dinero 
-                </a>
-              </li>
-              <li>
-                <a href="#" class=" link-primary nav-link py-0  border-top" routerLink="retirar" title="Vender" data-bs-toggle="tooltip" data-bs-placement="right">
-                  <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"/></svg> -->
-                  Retirar dinero
-                </a>
-              </li>
-              <li>
-                <a href="#" class=" link-primary nav-link py-0  border-top" routerLink="oppesos" title="Operaciones" data-bs-toggle="tooltip" data-bs-placement="right">
-                  <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"/></svg> -->
-                  Operaciones
-                </a>
-              </li>
-              <li>
-                <a href="#" class=" link-primary nav-link py-0  border-top border-bottom" routerLink="transferir" title="Swap" data-bs-toggle="tooltip" data-bs-placement="right">
-                  <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"/></svg> -->
-                  Transferir
-                </a>
-              </li>
-              
-            </ul>
-        </div>
-    </nav>
-    
-</div>
-  
-<div class="my-container active-cont">
-  <button class="btn btn-primary" id="menu-btn">Menu</button>
-  <div class="container-fluid cont-dash">
-      <div class=" justify-content-around align-items-center">
-        <router-outlet></router-outlet>
-      </div>
+    <div class="list-group list-group-flush">
+      <a href="#" class="list-group-item list-group-item-action bg-transparent" routerLink="comprar">Mis datos</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent" routerLink="vender">Preferencias</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent" routerLink="opcripto">Cerrar sesión</a>
+    </div>
+
   </div>
-</div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <button class="btn btn-primary" (click)="clickEvent()">Menu</button>
+<!--     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     
+      <div class="container-fluid">
 
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="button">Search</button>
+          </form>
+        </div>
+
+
+      </div>
+    </nav> -->
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
