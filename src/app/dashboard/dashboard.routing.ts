@@ -12,6 +12,7 @@ import { TransferirDineroComponent } from './pesos/transferir-dinero/transferir-
 import { PrincipalComponent } from './principal/principal.component';
 import { DashboardComponent } from './dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { DashNavbarComponent } from './navbar/navbar.component';
 
 
 const routes: Routes = [
@@ -31,7 +32,7 @@ const routes: Routes = [
             {path: 'comprar', component: ComprarCriptosComponent},        
             {path: 'consultasaldo', component: ConsultaSaldoComponent},        
             {path: 'sidebar', component: SidebarComponent},
-
+            {path: 'DashNav', component: DashNavbarComponent},
         ]
     },
 
