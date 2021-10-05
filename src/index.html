@@ -9,6 +9,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
+    <script src="https://kit.fontawesome.com/0c9f253acd.js" crossorigin="anonymous"></script>
 
     <!-- Compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
@@ -49,7 +50,7 @@
 
     <!-- Para ocultar el sidebar del dashboard -->
 
-    <script>
+<!--     <script>
       window.onload = function () {
         var menu_btn = document.querySelector("#menu-btn");
         var sidebar = document.querySelector("#sidebar");
@@ -60,6 +61,38 @@
         });
       };
     </script>
+ -->
+
+ <script>
+  // Hide submenus
+$('#body-row .collapse').collapse('hide'); 
+
+// Collapse/Expand icon
+$('#collapse-icon').addClass('fa-angle-double-left'); 
+
+// Collapse click
+$('[data-toggle=sidebar-colapse]').click(function() {
+  SidebarCollapse();
+});
+
+function SidebarCollapse () {
+  $('.menu-collapsed').toggleClass('d-none');
+  $('.sidebar-submenu').toggleClass('d-none');
+  $('.submenu-icon').toggleClass('d-none');
+  $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+  
+  // Treating d-flex/d-none on separators with title
+  var SeparatorTitle = $('.sidebar-separator-title');
+  if ( SeparatorTitle.hasClass('d-flex') ) {
+      SeparatorTitle.removeClass('d-flex');
+  } else {
+      SeparatorTitle.addClass('d-flex');
+  }
+  
+  // Collapse/Expand icon
+  $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+}
+</script>
 
 
   </body>
