@@ -3,3 +3,17 @@
     padding: 0.2rem;
 
 }
+
+.center-in-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+  }
+
+  .center-in-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+  }

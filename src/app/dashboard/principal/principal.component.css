@@ -17,24 +17,10 @@
     border-radius: 20px;
   }
  */
-.titulo {
-  font-family: Roboto;
-  font-style: normal;
-  /* display: flex; */
-  /* align-items: center; */
-  color: #000000;
-}
 
-.subtitulo {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  display: flex;
-  align-items: center;
-
-  color: #3a0ca3;
-}
 
 .overf {
   overflow: hidden;
 }
+
+
