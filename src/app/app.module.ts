@@ -27,6 +27,7 @@ import { RegistroComponent } from './home/registro/registro.component';
 import { DashboardRoutingModule } from './dashboard/dashboard.routing';
 import { ComprarCriptosComponent } from './dashboard/criptos/comprar-criptos/comprar-criptos.component';
 import { VenderCriptosComponent } from './dashboard/criptos/vender-criptos/vender-criptos.component';
+import { DashNavbarComponent } from './dashboard/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { VenderCriptosComponent } from './dashboard/criptos/vender-criptos/vende
     OperacionesCriptosComponent,
     LoginComponent,
     RegistroComponent,
-    VenderCriptosComponent
+    VenderCriptosComponent,
+    DashNavbarComponent
   ],
   imports: [
     BrowserModule,

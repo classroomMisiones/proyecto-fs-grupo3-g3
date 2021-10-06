@@ -1,0 +1,10 @@
+.navbar{
+    background: linear-gradient(to right,#a6bae9,#333879);
+    
+}
+
+.textobarra{
+    color:white;
+}
+
+.dropdown-toggle { outline: 0; }

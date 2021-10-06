@@ -14,7 +14,6 @@ import { IngresarDineroComponent } from "./pesos/ingresar-dinero/ingresar-dinero
 import { RetirarDineroComponent } from "./pesos/retirar-dinero/retirar-dinero.component";
 import { TransferirDineroComponent } from "./pesos/transferir-dinero/transferir-dinero.component";
 import { PrincipalComponent } from "./principal/principal.component";
-import { DashNavbarComponent } from "./navbar/navbar.component";
 
 @NgModule({
     imports: [
@@ -51,7 +50,7 @@ import { DashNavbarComponent } from "./navbar/navbar.component";
         TransferirDineroComponent,
         PrincipalComponent,
         DashboardComponent, */
-        DashNavbarComponent,
+        
     ]
   })
 
