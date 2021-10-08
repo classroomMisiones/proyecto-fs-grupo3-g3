@@ -26,6 +26,7 @@ import { RegistroComponent } from './home/registro/registro.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardRoutingModule } from './dashboard/dashboard.routing';
 import { ComprarCriptosComponent } from './dashboard/criptos/comprar-criptos/comprar-criptos.component';
+import { ServicioModeloService } from './servicio-modelo.service';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,7 @@ import { ComprarCriptosComponent } from './dashboard/criptos/comprar-criptos/com
     DashboardRoutingModule,
     
   ],
-  providers: [],
+  providers: [ServicioModeloService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

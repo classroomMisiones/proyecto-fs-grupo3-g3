@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServicioModeloService } from './servicio-modelo.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ewallet-g3';
+
+  constructor(private MiServicio:ServicioModeloService){}
 
   
 }
