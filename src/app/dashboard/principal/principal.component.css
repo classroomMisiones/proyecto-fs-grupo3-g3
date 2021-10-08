@@ -1,7 +1,7 @@
 .dash-img {
-  vertical-align: bottom;
+  vertical-align: middle;
   border: 0;
-  width: 89%;
+  width: 100%;
   height: auto;
 }
 /* .stl {
@@ -23,4 +23,9 @@
   overflow: hidden;
 }
 
-
+.marg-form-d {
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-left: 34px;
+  padding-right: 34px;
+}
