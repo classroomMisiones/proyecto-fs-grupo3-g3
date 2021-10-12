@@ -1,9 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-body { 
-    padding-top: 48px;
-    /* background-color: #fafaff; */
-    /* height:1vh; */
-}
+/* body { 
+    padding-top: 30px;
+} */
 
 /* html{
     height:100%;
@@ -29,7 +27,7 @@ h3 {
     font-family: 'Public Sans', sans-serif; 
     font-weight:200;
     font-size:30px;
-    color: #747474;
+    color: #3E6BFD;
 }
 h4 { 
     font-family: 'Public Sans', sans-serif; 
