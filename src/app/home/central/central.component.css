@@ -28,3 +28,7 @@
   /* color:rgb(80, 101, 122); */
   border-radius: 20px;
 }
+
+img {
+  max-width: 83%;
+  height: auto; }
