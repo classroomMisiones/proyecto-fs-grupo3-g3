@@ -57,10 +57,6 @@ export class ComprarCriptosComponent implements OnInit {
     // var mysource = imgsrc.options[imgsrc.selectedIndex].value 
     //"assets/monedas/blank.png"
 
-    if (num == 1) {
-      valor = "assets/monedas/peso_bn.png";
-      console.log('El img mostraría ', valor);
-    }
     if (num == 2) {
       valor = "assets/monedas/bitcoin_bn.png";
       console.log('El img mostraría ', valor);

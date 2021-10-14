@@ -11,10 +11,10 @@
                     
                     <div class="col-12">
                         <div class="row">
-                            <label for="selectmoneda" class="form-label">Qué cripto querés vender?<span class="text-danger"> *</span></label>
+                            <label for="selectmoneda" class="form-label">Qué cripto querés vender?<span class="text-danger" > *</span></label>
                             <div class="col-10">
                                 <div class="col-12 mb-3">
-                                    <select class="form-select"  id="selectmoneda" formControlName="selectmoneda">
+                                    <select class="form-select"  id="selectmoneda" formControlName="selectmoneda" (change)="CambiaIcono()">
                                         <option selected disabled value="">Seleccione una opción</option>
                                         <option value="2">Bitcoin</option>
                                         <option value="3">Ethereum</option>
@@ -24,7 +24,7 @@
                                 </div>          
                             </div>
                             <div class="col-2">
-                                <img class="mx-auto d-block" id="imgmoneda" width="40" src="assets/monedas/blank.png"/>
+                                <img class="mx-auto d-block" id="imgmoneda" width="40" src='imgsrc'>
                             </div>
                         </div>
                     </div>
