@@ -28,11 +28,11 @@ public Fecha_Nac : string="";
 }
 
 
-export class  LoginRequest {
-  UserName:string="";
-  Clave:string="";
-  Token?: string;
-}
+ export class  LoginRequest {
+   UserName:string="";
+   password:string="";
+   Token?: string;
+ }
 
 
 

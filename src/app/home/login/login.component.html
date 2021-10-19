@@ -1,44 +1,50 @@
 
 
-<div class="container-fluid center-in-display animated fadeInLeft">
+<div class="container-fluid center-in-display">
     <div class="dialog modal-login">
         <div class="modal-content">
-            <div class="modal-header">				
-                <h4 class="modal-title">Iniciar Sesión</h4>
-                <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
-			</div>
-			<div class="modal-body">
-				<form action="" method="post">
+           
+                <div class="modal-header">				
+                   <h4 class="modal-title">Iniciar Sesión</h4>
+			    </div>
+            <form [formGroup]='form' (ngSubmit)="save($event)"> 
+		        <div class="modal-body">
+                
                     <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user"></i>  </span>
-							<input type="text" formControlName="Email"
-                            [(ngModel)]="usuario.UserName"
-                            class="form-control" 
-                            name="mail" placeholder="Usuario">
-                            <small *ngIf="emailNovalido" class="text-danger" > ingrese su email</small> 
-						</div>
+						<input type="text" formControlName="UserName"
+                        class="form-control" placeholder="Usuario"
+
+                        [(ngModel)]="usuario.UserName"
+                        [class.is-invalid]="UserNameNovalido">
+                        <small *ngIf="UserNameNovalido" class="text-danger"> ingrese su correo</small> 			
 					</div>
-					<div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-							<input type="password" class="form-control" name="password"
-                            [(ngModel)]="usuario.Clave" 
-                            placeholder="Password" required="required">
-						</div>
+
+                    <div class="form-group">
+						<input type="text" formControlName="password"
+                        class="form-control" placeholder="contraseña"
+
+                        [(ngModel)]="usuario.password"
+                        [class.is-invalid]="passwordNovalido">
+                        <small *ngIf="passwordNovalido" class="text-danger"> ingrese su contraseña</small> 			
 					</div>
+
+
+
                     <div class="center-in-container">
                         <div class="form-group">
                             <a class="nav-link" routerLink="../dashboard">
-                                <button class="btn btn-primary btn-block btn-lg">Entrar</button>
+                                <button type="submit"[disabled]="form.invalid" class="btn btn-primary">Entrar </button> 
                             </a>
                         </div>
                     </div>
 					<p class="hint-text"><a href="#">Olvidaste tu contraseña?</a></p>
-				</form>
-			</div>
-			<div class="modal-footer">No tienes una cuenta? <a href="#" routerLink="../registro">Registrate</a></div>
+                 </div>
+			       
+               
+			       <div class="modal-footer">No tienes una cuenta? <a href="#" routerLink="../registro">Registrate</a></div>
+                </form>
 		</div>
+  
 	</div>
 </div>     
 
@@ -47,3 +53,4 @@
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
