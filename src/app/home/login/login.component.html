@@ -1,6 +1,6 @@
 
 
-<div class="container-fluid center-in-display">
+<div class="container-fluid center-in-display animated fadeInLeft">
     <div class="dialog modal-login">
         <div class="modal-content">
             <div class="modal-header">				
@@ -12,13 +12,19 @@
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user"></i>  </span>
-							<input type="text" class="form-control" name="username" placeholder="Usuario" required="required">
+							<input type="text" formControlName="Email"
+                            [(ngModel)]="usuario.UserName"
+                            class="form-control" 
+                            name="mail" placeholder="Usuario">
+                            <small *ngIf="emailNovalido" class="text-danger" > ingrese su email</small> 
 						</div>
 					</div>
 					<div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-							<input type="text" class="form-control" name="password" placeholder="Password" required="required">
+							<input type="password" class="form-control" name="password"
+                            [(ngModel)]="usuario.Clave" 
+                            placeholder="Password" required="required">
 						</div>
 					</div>
                     <div class="center-in-container">
