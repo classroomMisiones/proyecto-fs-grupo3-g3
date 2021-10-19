@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormGroup, FormBuilder, FormControl, Validators, MaxLengthValidator} from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators, MaxLengthValidator, NgForm} from '@angular/forms';
+import { UsuarioModels } from 'src/app/usuario.models';
 
 
 
@@ -9,12 +10,23 @@ import { FormGroup, FormBuilder, FormControl, Validators, MaxLengthValidator} fr
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
-export class RegistroComponent {
+export class RegistroComponent implements OnInit{
   form!: FormGroup;
+ 
+  usuario: UsuarioModels = new UsuarioModels();
+
+  ngOnInit(): void {
+ 
+//  this.usuario.Email="gustavomisio@yahoo.com.ar"
+
+  }
+
+
   constructor(private formBuilder: FormBuilder 
     ){
     this.buildForm();
    };
+   
    get usernameNovalido(){
     return this.form.get('username')?.invalid && this.form.get ('username')?.touched
  }
@@ -56,6 +68,9 @@ get password1Novalido(){
    return this.form.get('password2')?.invalid && this.form.get ('password2')?.touched
  }
 
+
+
+
    private buildForm() {
     this.form = this.formBuilder.group({
 
@@ -73,12 +88,14 @@ get password1Novalido(){
   
    }
 
-   save(event: Event) {
-    event.preventDefault();
-    if(this.form.valid){
-      const value = this.form.value;
-      console.log(value);
-    }
-  }
+     save(event: Event, usuario:UsuarioModels) {
+      event.preventDefault();
+      if(this.form.valid){
+        const value = this.form.value;
+        console.log(value);
+      }
+   }
+
+
    
 }
