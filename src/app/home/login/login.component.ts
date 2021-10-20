@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoginRequest } from 'src/app/Login.models';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -8,17 +10,19 @@ import { LoginRequest } from 'src/app/Login.models';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent  {
+export class LoginComponent implements OnInit {
 
   form!: FormGroup;
   usuario: LoginRequest = new LoginRequest();
   error: string="";
 
-  constructor(private formBuilder: FormBuilder 
-    ){
+  constructor(private formBuilder: FormBuilder, private authService: AuthService,
+    private router: Router){
    this.buildForm();
    };
 
+   ngOnInit(): void {
+  }
 
    get UserNameNovalido(){
     return this.form.get('UserName')?.invalid && this.form.get ('UserName')?.touched

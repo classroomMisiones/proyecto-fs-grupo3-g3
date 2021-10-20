@@ -29,11 +29,11 @@ public  Fecha_Alta: string="";
 }
 
 
- export class  LoginRequest {
-   UserName:string="";
-   password:string="";
-   Token?: string;
- }
+//  export class  LoginRequest {
+//    UserName:string="";
+//    password:string="";
+//    Token?: string;
+//  }
 
 
 

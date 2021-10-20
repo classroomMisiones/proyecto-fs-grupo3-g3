@@ -1,83 +1,53 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { UsuarioModels } from '../usuario.models';
+import { Observable, BehaviorSubject, } from 'rxjs';
 import {map} from 'rxjs/operators';
 import { LoginRequest } from '../Login.models';
+const TOKEN_KEY = 'auth-token';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  usertoken!: string;
+  url="https://localhost:44303/api/login";
+  currentUserSubject: BehaviorSubject<LoginRequest>;
+  currentUser: Observable<LoginRequest>;
+  loggedIn= new BehaviorSubject<boolean>(false);
 
-  constructor(private http:HttpClient) { }
-
- 
-logout(){
-  localStorage.removeItem('token');
+  constructor(private http:HttpClient) {
+    console.log("AUTH SERVICE WORKING");
+    this.currentUserSubject = new  BehaviorSubject<LoginRequest>(JSON.parse(localStorage.getItem(TOKEN_KEY) || '{}'));
+    this.currentUser = this.currentUserSubject.asObservable();
+  
   }
 
-  login(usuario:  LoginRequest){
-    const authData ={
-       email: usuario.UserName,
-       password: usuario.password,
-       returnSecureToken: true
-    };
-    // return this.http.post(
-    //   `${ this.url }/accounts:signInWithPassword?key= ${this.apikey}`,
-    //   authData 
-    // ).pipe(
-    //   map(resp=> {
-       
-    //     this.guardarToken(resp['idToken']);
-    //     return resp;
-    //   })
-    //  );
-
-
-
+  login(usuario: LoginRequest): Observable<any> {
+    return this.http.post<LoginRequest>(this.url, usuario).pipe(map(data => {
+      localStorage.setItem(TOKEN_KEY, data.Token);
+                        
+      this.currentUserSubject.next(data);
+      this.loggedIn.next(true);
+      return data;
+    }));   
   }
 
-  RegistrarUsuario(usuario: UsuarioModels){
-  const authData ={
-    // email: usuario.email,
-    // password: usuario.password,
-    // returnSecureToken: true
-  };
-  // return this.http.post(
-  //   `${ this.url }/accounts:signUp?key= ${this.apikey}`,
-  //   authData
-  //   ).pipe(
-  //    map(resp=> {
-    
-  //      this.guardarToken(resp['idToken']);
-  //      return resp;
-  //    })
-  //   );
-
+  get usuarioAutenticado(): LoginRequest {
+    return this.currentUserSubject.value;
   }
 
-   private guardarToken(idtoken: string){
-   this.usertoken= idtoken;
-   localStorage.setItem('token', idtoken)
-   }
-
-   leerToken(){
-
-  //  if(localStorage.getItem('token')){
-  //  this.usertoken = localStorage.getItem('token')
-  //  }else{
-  //    this.usertoken='';
-  //  }
-  //  return this.usertoken;
-
-  //  }
-
-  //  estaAutenticado():boolean {
-  //  return this.usertoken.length >2;
-  //  }
-
-
-   }
+  get estaAutenticado(): Observable<boolean> {
+    return this.loggedIn.asObservable();
   }
+
+  logOut(): void {
+    window.sessionStorage.clear();
+    localStorage.removeItem(TOKEN_KEY);
+    this.loggedIn.next(false);
+  }
+
+
+
+}
