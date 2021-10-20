@@ -23,7 +23,7 @@ export class RegistroComponent implements OnInit{
   }
   
 
-  constructor(private formBuilder: FormBuilder ){
+  constructor(private formBuilder: FormBuilder, private usuarioService: UsuarioService, private router: Router){
     this.buildForm();
    };
    
@@ -91,32 +91,24 @@ get password1Novalido(){
 
       save(event: Event, usuario:UsuarioModels):void { //en el la profe dice void
        event.preventDefault();
-     if(this.form.valid){
-         const value = this.form.value;
-         console.log(value);
-       }
-    }
-
-//    onEnviar(event: Event, usuario:UsuarioModels): void {
-//     event.preventDefault; 
- 
-//     if (this.form.valid)
-//     {
-//       console.log(usuario);
-//       this.usuarioService.onCrearRegistro(usuario).subscribe(
-//         data => {
-//           console.log(data);
-//           if (data['ID_usuario']>0)
-//           {
-//             alert("El registro ha sido creado satisfactoriamente. A continuación, por favor Inicie Sesión.");
-//             this.router.navigate(['/login'])  //iniciar-sesion
-//           }
-//       })
-//   }
-//   else
-//   {
-//     this.form.markAllAsTouched(); 
-//   }
-// };
+       
+    if (this.form.valid)
+    {
+      console.log(usuario);
+      this.usuarioService.onCrearRegistro(usuario).subscribe(
+        data => {
+          console.log(data);
+          if (data['ID_usuario']>0)
+          {
+            alert("El registro ha sido creado satisfactoriamente. A continuación, por favor Inicie Sesión.");
+            this.router.navigate(['/login'])
+          }
+      })
+  }
+  else
+  {
+    this.form.markAllAsTouched(); 
+  }
+};
    
 }
