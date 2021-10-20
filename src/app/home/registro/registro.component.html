@@ -1,5 +1,6 @@
 <br>
 
+
 <div class=" bg-light">
   
     <div class="container shadow">
@@ -10,7 +11,7 @@
         </div>
       </div> 
       <form [formGroup]='form' (ngSubmit)="save($event, usuario)"> 
-  
+        <!-- <form  [formGroup]="form"  class="form" (ngSubmit)="onEnviar($event, usuario)"  -->
         
         <div class="col-12 col-lg-6">
           
@@ -19,7 +20,7 @@
 
 
                 Username: <br> 
-                <input type="text" formControlName="username"
+                <input type="text" id="username" formControlName="username"
                 class="form-control" placeholder="username"
                 [(ngModel)]="usuario.UserName"
                 [class.is-invalid]="usernameNovalido">
@@ -34,7 +35,7 @@
 
 
                 Nombre: <br> 
-                <input type="text" formControlName="nombre"
+                <input type="text" id="nombre" formControlName="nombre"
                 class="form-control" placeholder="nombre"
                 [(ngModel)]="usuario.Nombre"
                 [class.is-invalid]="nombreNovalido">
@@ -48,7 +49,7 @@
                 <div class="form-floating mb-3 bootstrap-iso">
               
                 Apellido: <br> 
-                <input type="text" formControlName="apellido"
+                <input type="text" id="apellido" formControlName="apellido"
                 class="form-control" placeholder="apellido"
                 [(ngModel)]="usuario.Apellido"
                 [class.is-invalid]="apellidoNovalido">
@@ -64,7 +65,7 @@
                 <div class="form-floating mb-3 bootstrap-iso">
 
                     Email: <br> 
-                    <input type="text" formControlName="email"  
+                    <input type="text"  id="email" formControlName="email"  
                     class="form-control" placeholder="email"
                     [(ngModel)]="usuario.Email"
                     [class.is-invalid]="emailNovalido" >
@@ -79,7 +80,7 @@
                 <div class="form-floating mb-3 bootstrap-iso">
                   
                    DNI: <br> 
-                    <input type="number" formControlName="dni"
+                    <input type="number" id="dni" formControlName="dni"
                     class="form-control" placeholder="dni"
                     [(ngModel)]="usuario.DNI"
                     [class.is-invalid]="dniNovalido">
@@ -94,7 +95,7 @@
                 <div class="form-floating mb-3 bootstrap-iso">
                   
                    Localidad: <br> 
-                    <input type="text" formControlName="localidad"
+                    <input type="text" id="localidad" formControlName="localidad"
                     class="form-control" placeholder="localidad"
                     [(ngModel)]="usuario.Localidad"
                     [class.is-invalid]="localidadNovalido">
@@ -110,7 +111,7 @@
                 <div class="form-floating mb-3 bootstrap-iso">
                   
                    telefono: <br> 
-                    <input type="number" formControlName="telefono"
+                    <input type="number" id="telefono" formControlName="telefono"
                     class="form-control" placeholder="telefono"
                     [(ngModel)]="usuario.Telefono"
                     [class.is-invalid]="telefonoNovalido">
@@ -125,11 +126,11 @@
                 <div class="form-floating mb-3 bootstrap-iso">
                   
                    Fecha de nacimiento: <br> 
-                    <input type="text" formControlName="fecha"
+                    <input type="text" id="Fecha_Nac" formControlName="Fecha_Nac"
                     class="form-control" placeholder="fecha"
                     [(ngModel)]="usuario.Fecha_Nac"
-                    [class.is-invalid]="fechaNovalido">
-                    <small *ngIf="fechaNovalido" class="text-danger"> ingrese su fecha de nacimiento</small> 
+                    [class.is-invalid]="Fecha_NacNovalido">
+                    <small *ngIf="Fecha_NacNovalido" class="text-danger"> ingrese su fecha de nacimiento</small> 
                 </div>
                   
             </div>
@@ -139,10 +140,11 @@
                 <div class="form-floating mb-3 bootstrap-iso">
                   
                    password1: <br> 
-                    <input type="password" formControlName="password1"
-                    class="form-control" placeholder="password1"
-                    [(ngModel)]="usuario.Clave"
+                    <input type="password" id="password1" formControlName="password1"
+                    class="form-control" placeholder="password1"    
+                    [(ngModel)]="usuario.Clave"   
                     [class.is-invalid]="password1Novalido">
+                    
                     <small *ngIf="password1Novalido" class="text-danger"> ingrese su contraseña</small> 
                 </div>
                   
@@ -153,7 +155,7 @@
               <div class="form-floating mb-3 bootstrap-iso">
                 
                  password2: <br> 
-                  <input type="password" formControlName="password2"
+                  <input type="password" id="password2" formControlName="password2"
                   class="form-control" placeholder="password2"
                   
                   [class.is-invalid]="password2Novalido">

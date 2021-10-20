@@ -31,6 +31,17 @@ import { DashNavbarComponent } from './dashboard/navbar/navbar.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import { RouterModule } from '@angular/router';
+
+
+import { UsuarioService } from './services/usuario';
+import { AuthService } from './services/auth.service';
+import { ErrorInterceptor } from './services/error.service';
+import { JwtInterceptor } from './services/interceptor.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,9 +74,14 @@ import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
     FormsModule,
     ReactiveFormsModule,
     DashboardRoutingModule,
+    HttpClientModule,
+    RouterModule,
     
   ],
-  providers: [],
+  providers: [UsuarioService, AuthService, 
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

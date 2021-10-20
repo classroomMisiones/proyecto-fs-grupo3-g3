@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormBuilder, FormControl, Validators, MaxLengthValidator, NgForm} from '@angular/forms';
 import { UsuarioModels } from 'src/app/usuario.models';
-
+import { Router } from '@angular/router';
+import { UsuarioService } from 'src/app/services/usuario';
 
 
 @Component({
@@ -17,13 +18,12 @@ export class RegistroComponent implements OnInit{
 
   ngOnInit(): void {
  
-//  this.usuario.Email="gustavomisio@yahoo.com.ar"
+ this.usuario.Email="gustavomisio@yahoo.com.ar"
 
   }
+  
 
-
-  constructor(private formBuilder: FormBuilder 
-    ){
+  constructor(private formBuilder: FormBuilder ){
     this.buildForm();
    };
    
@@ -55,8 +55,8 @@ get telefonoNovalido(){
   return this.form.get('telefono')?.invalid && this.form.get ('telefono')?.touched
 }
 
-get fechaNovalido(){
-  return this.form.get('fecha')?.invalid && this.form.get ('telefono')?.touched
+get Fecha_NacNovalido(){
+  return this.form.get('Fecha_Nac')?.invalid && this.form.get ('Fecha_Nac')?.touched
 }
 
 
@@ -81,21 +81,42 @@ get password1Novalido(){
     dni: ['', [Validators.required,Validators.maxLength(8)]],
     localidad: ['', [Validators.required, Validators.minLength(3),Validators.maxLength(16)]],
     telefono: ['', [Validators.required, Validators.minLength(3),Validators.maxLength(16)]],
-    fecha: ['', [Validators.required, Validators.minLength(9)]],
+    Fecha_Nac: ['', [Validators.required, Validators.minLength(9)]],
     password1:['',[Validators.required]],
     password2:['',[Validators.required]],
      });
   
    }
+  
 
-     save(event: Event, usuario:UsuarioModels) {
-      event.preventDefault();
-      if(this.form.valid){
-        const value = this.form.value;
-        console.log(value);
-      }
-   }
+      save(event: Event, usuario:UsuarioModels):void { //en el la profe dice void
+       event.preventDefault();
+     if(this.form.valid){
+         const value = this.form.value;
+         console.log(value);
+       }
+    }
 
-
+//    onEnviar(event: Event, usuario:UsuarioModels): void {
+//     event.preventDefault; 
+ 
+//     if (this.form.valid)
+//     {
+//       console.log(usuario);
+//       this.usuarioService.onCrearRegistro(usuario).subscribe(
+//         data => {
+//           console.log(data);
+//           if (data['ID_usuario']>0)
+//           {
+//             alert("El registro ha sido creado satisfactoriamente. A continuación, por favor Inicie Sesión.");
+//             this.router.navigate(['/login'])  //iniciar-sesion
+//           }
+//       })
+//   }
+//   else
+//   {
+//     this.form.markAllAsTouched(); 
+//   }
+// };
    
 }
