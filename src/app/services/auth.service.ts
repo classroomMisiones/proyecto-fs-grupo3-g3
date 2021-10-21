@@ -19,6 +19,7 @@ export class AuthService {
 
   constructor(private http:HttpClient) {
     console.log("AUTH SERVICE WORKING");
+    //this.currentUserSubject = new  BehaviorSubject<LoginRequest>(JSON.parse(localStorage.getItem(TOKEN_KEY) || '{}'));
     this.currentUserSubject = new  BehaviorSubject<LoginRequest>(JSON.parse(localStorage.getItem('currentUser') || '{}'));
     this.currentUser = this.currentUserSubject.asObservable();
   
@@ -27,7 +28,7 @@ export class AuthService {
   login(usuario: LoginRequest): Observable<any> {
     return this.http.post<LoginRequest>(this.url, usuario).pipe(map(data => {
       localStorage.setItem(TOKEN_KEY, data.Token);
-                        
+      //sessionStorage.setItem('id', data.id);
       this.currentUserSubject.next(data);
       this.loggedIn.next(true);
       return data;

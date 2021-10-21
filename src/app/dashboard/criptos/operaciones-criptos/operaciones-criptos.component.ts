@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CuentaService } from 'src/app/services/cuenta.service';
 import {AuthService} from 'src/app/services/auth.service';
-import { operacionesmodels } from 'src/app/movimientos.models';
+import { LoginRequest } from 'src/app/Login.models';
 
 @Component({
   selector: 'app-operaciones-criptos',
@@ -13,6 +13,7 @@ export class OperacionesCriptosComponent implements OnInit {
   mostrar_movimientos=true;
   hoy= new Date();
   movimientos: any;
+  userid: any;
   //movimientos: operacionesmodels = new operacionesmodels();
   
   
@@ -21,13 +22,17 @@ export class OperacionesCriptosComponent implements OnInit {
    }
 
   ngOnInit(): void {
-
     this.cuentaService.ObtenerUltimosMovimientos(133).subscribe(data=> {
-        this.movimientos = data
-        console.log(data);
-      }
+      this.movimientos = data
+      console.log(data);
+    }
     );
-
+    
   }
+  
+  
+/*   obteneridusuario(){
+  this.userid=AuthService.  
+  } */
 
 }

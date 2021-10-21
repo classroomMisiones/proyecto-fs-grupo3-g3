@@ -1,16 +1,29 @@
-<h1>Ultimos Movimientos</h1>
-<h2>{{hoy|date: "d/M/yy"}}</h2>
+<div class="container justify-center-center">
+    <div class="card px-5">
 
-<table *ngIf="mostrar_movimientos">
-    <thead>
-        <th>Operación</th>
-        <th>Monto</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let element of movimientos" >
-            <td>{{element.Tipo_operacion}}</td>
-            <td>{{element.Monto|currency}}</td>
-        </tr>
-    </tbody>
-   
-</table>
+        <br>
+        
+        <h1>Movimientos realizados hasta el {{hoy|date: "d/M/yy"}}</h1>
+        <h2></h2>
+        
+        <table  class="table table-striped" *ngIf="mostrar_movimientos">
+            <thead class="table-light">
+                <th>Fecha y Hora</th>
+                <th>Operación</th>
+                <th>Monto</th>
+                <th>Comisión</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let element of movimientos" >
+                    <td>{{element.FechayHora|date: "dd/MM/yyyy - hh:mm:ss"}}</td>
+                    <td>{{element.Operacion}}</td>
+                    <td>{{element.Monto|currency}}</td>
+                    <td>{{element.Comision|currency}}</td>
+                </tr>
+            </tbody>
+           
+        </table>
+        <br>
+
+    </div>
+</div>

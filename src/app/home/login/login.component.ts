@@ -16,8 +16,7 @@ export class LoginComponent implements OnInit {
   usuario: LoginRequest = new LoginRequest();
   error: string="";
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService,
-    private router: Router){
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router){
    this.buildForm();
    };
 
@@ -56,7 +55,7 @@ export class LoginComponent implements OnInit {
         .subscribe(
           data => {
           console.log("DATA"+ JSON.stringify( data));
-          //localStorage.setItem('auth-token', JSON.stringify(data ));
+          localStorage.setItem('auth-token', JSON.stringify(data ));
   
           this.router.navigate(['/dashboard']);
          
