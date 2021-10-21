@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
     //     console.log(value);
     //   }
     // }
-    login(event: Event, usuario: LoginRequest)
+    save(event: Event, usuario: LoginRequest)
     {
       event.preventDefault(); //Cancela la funcionalidad por default.
       if (this.form.valid)

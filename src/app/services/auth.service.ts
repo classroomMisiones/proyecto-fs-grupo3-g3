@@ -13,13 +13,13 @@ const TOKEN_KEY = 'auth-token';
 export class AuthService {
 
   url="http://localhost:60912/api/Login/authenticate";
-  currentUserSubject: BehaviorSubject<LoginRequest>;
-  currentUser: Observable<LoginRequest>;
+  private currentUserSubject: BehaviorSubject<LoginRequest>;
+  public currentUser: Observable<LoginRequest>;
   loggedIn= new BehaviorSubject<boolean>(false);
 
   constructor(private http:HttpClient) {
     console.log("AUTH SERVICE WORKING");
-    this.currentUserSubject = new  BehaviorSubject<LoginRequest>(JSON.parse(localStorage.getItem(TOKEN_KEY) || '{}'));
+    this.currentUserSubject = new  BehaviorSubject<LoginRequest>(JSON.parse(localStorage.getItem('currentUser') || '{}'));
     this.currentUser = this.currentUserSubject.asObservable();
   
   }
