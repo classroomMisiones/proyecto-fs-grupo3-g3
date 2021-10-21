@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
 
    private buildForm() {
     this.form = this.formBuilder.group({
-      UserName:['', Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")], 
+      UserName:['',[Validators.required, Validators.minLength(3)]], 
       password:['',[Validators.required, Validators.minLength(6)]]
    
      });
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
     //     console.log(value);
     //   }
     // }
-    save(event: Event, usuario: LoginRequest)
+    login(event: Event, usuario: LoginRequest)
     {
       event.preventDefault(); //Cancela la funcionalidad por default.
       if (this.form.valid)
