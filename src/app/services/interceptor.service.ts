@@ -11,23 +11,20 @@ export class JwtInterceptor implements HttpInterceptor{
   constructor( private authService: AuthService) { 
     
   }
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    throw new Error('Method not implemented.');
-  }
 
-  // intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-  //   const token = this.authService.usuarioAutenticado.Token;
-  //   console.log("INTERCEPTOR WORKING");
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    const token = this.authService.usuarioAutenticado.Token;
+    console.log("INTERCEPTOR WORKING");
     
-  //   if(token) {
-  //     req = req.clone({
-  //       setHeaders:{
-  //         'Authorization':  `Bearer ${token}`
-  //       }
-  //     });
-  //   }
-  //   console.log('headers:', req.headers);
-  //   return next.handle(req);
-  // }
+    if(token) {
+      req = req.clone({
+        setHeaders:{
+          'Authorization':  `Bearer ${token}`
+        }
+      });
+    }
+    console.log('headers:', req.headers);
+    return next.handle(req);
+  }
 
 }
