@@ -77,7 +77,7 @@ get password1Novalido(){
     apellido: ['', [Validators.required, Validators.minLength(3),Validators.maxLength(16)]],
     email: ['', Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")],
     dni: ['', [Validators.required,Validators.maxLength(8)]],
-    localidad: ['', [Validators.required, Validators.minLength(3),Validators.maxLength(16)]],
+    localidad: ['', [Validators.required]],
     telefono: ['', [Validators.required, Validators.minLength(3),Validators.maxLength(16)]],
     Fecha_Nac: ['', [Validators.required, Validators.minLength(9)]],
     password1:['',[Validators.required]],

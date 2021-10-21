@@ -1,1 +1,16 @@
-<p>operaciones-criptos works!</p>
+<h1>Ultimos Movimientos</h1>
+<h2>{{hoy|date: "d/M/yy"}}</h2>
+
+<table *ngIf="mostrar_movimientos">
+    <thead>
+        <th>Operación</th>
+        <th>Monto</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let element of movimientos" >
+            <td>{{element.Tipo_operacion}}</td>
+            <td>{{element.Monto|currency}}</td>
+        </tr>
+    </tbody>
+   
+</table>

@@ -95,7 +95,7 @@
                 <div class="form-floating mb-3 bootstrap-iso">
                   
                    Localidad: <br> 
-                    <input type="text" id="localidad" formControlName="localidad"
+                    <input type="number" id="localidad" formControlName="localidad"
                     class="form-control" placeholder="localidad"
                     [(ngModel)]="usuario.Localidad"
                     [class.is-invalid]="localidadNovalido">
@@ -173,11 +173,11 @@
                 <p class="tyc">Al registrarte en MyCoin estás aceptando nuestros <a href="#">Terminos y condiciones</a> de servicio.</p>
               </div>
                <div class="col-12 d-flex justify-content-center mb-3">
-                <button type="submit"[disabled]="form.invalid" class="btn btn-primary">Registrar </button> 
+                <button type="submit"[disabled]="form.invalid" class="btn btn-primary">Registrar</button> 
               </div> 
               <div class="col-12 d-flex justify-content-center">
                 <a href="#" routerLink="../login">Ya estoy registrado.</a>
-                <!-- <button type="button" class="btn btn-secondary" routerLink="../login">Ya tengo una cuenta</button> -->
+                <!--  <button type="button" class="btn btn-secondary" routerLink="../login">Ya tengo una cuenta</button> -->
               </div>
             </div>
        
