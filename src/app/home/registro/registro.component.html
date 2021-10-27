@@ -1,44 +1,149 @@
-<form>
-  <h1>CAMBIOS</h1>
-
-    <h1 class="h3 mb-3 fw-normal">Registro</h1>
-<div class="box-body">
-    <div class="form-floating">
-
-        <input type="name" name="nombre" class="form-control" id="floatingInput" placeholder="ingrese su nombre">
-        <label for="floatingInput">Nombre Completo</label>
+<br>
+<div class=" bg-light ">
   
+    <div class="container shadow">
+      <br>
+      <div class="row mt-2">
+        <div class="col-12 d-flex justify-content-center">
+          <h2 class="form-title">Registrate en MyCoin</h2>
+        </div>
+      </div>  
+      <br>      
+      <div class="row mt-2">
+        <div class="col-12 col-lg-6">
+          <div class="signup-form">
+              
+            <div class="row">
+              <div class="col-6">
+                <div class="form-floating mb-3 bootstrap-iso">
+                  
+                  <input type="text" class="form-control inp-alt" id="nombre1" placeholder="nombre">
+                  <label for="nombre1">Nombre<span class="text-danger"> *</span></label>
+                  
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-floating mb-3 bootstrap-iso">
+                  
+                  <input type="text" class="form-control inp-alt" id="apellido" placeholder="apellido">
+                  <label for="apellido">Apellido<span class="text-danger"> *</span></label>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                
+                <div class="form-floating mb-3 bootstrap-iso">
+                  <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                  <label for="email">Email<span class="text-danger"> *</span></label>
+                </div>
+                
+              </div>
+              <div class="col-12">
+
+                <div class="form-floating mb-3 bootstrap-iso">
+                  
+                  <input type="id" id="DNI" class="form-control" id="dni" placeholder="DNI">
+                  <label for="dni">DNI<span class="text-danger"> *</span></label>
+                  
+                </div>
+
+              </div>
+              <div class="col-12">
+                
+                <div class="bootstrap-iso">
+                  <div class="form-floating mb-3"> <!-- Date input -->
+                    <input class="form-control" id="date" name="date" placeholder="dd/mm/aaaa" type="text"/>
+                    <label for="date">Fecha de nacimiento<span class="text-danger"> *</span></label>
+                  </div>
+                </div>
+                            
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <div class="form-floating mb-3 bootstrap-iso">
+                  
+                  <input type="text" class="form-control inp-alt" id="provincia" placeholder="Provincia">
+                  <label for="provincia">Provincia<span class="text-danger"> *</span></label>
+                  
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-floating mb-3 bootstrap-iso">
+                  
+                  <input type="text" class="form-control inp-alt" id="localidad" placeholder="Localidad">
+                  <label for="localidad">Localidad<span class="text-danger"> *</span></label>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-12">
+                
+                <div class="form-floating mb-3 bootstrap-iso">
+            
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                  <label for="floatingPassword">Contraseña<span class="text-danger"> *</span></label>
+            
+                </div>
+            
+              </div>
+              <div class="col-12">
+
+                <div class="form-floating bootstrap-iso">
+            
+                  <input type="password" class="form-control" id="floatingPassword2" placeholder="Ingrese nuevamente su Contraseña">
+                  <label for="floatingPassword">Repetir Contraseña<span class="text-danger"> *</span></label>
+              
+                </div>
+            
+              </div>
+
+              
+            </div>
+            <div class="row mt-0">
+              <div class="col-12 d-flex justify-content-center mt-2 mb-0">
+                <p class="tyc">Al registrarte en MyCoin estás aceptando nuestros <a href="#">Terminos y condiciones</a> de servicio.</p>
+              </div>
+              <div class="col-12 d-flex justify-content-center mb-3">
+                <button type="button" class="btn btn-primary">Registrar</button>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <a href="#" routerLink="../login">Ya estoy registrado.</a>
+                <!-- <button type="button" class="btn btn-secondary" routerLink="../login">Ya tengo una cuenta</button> -->
+              </div>
+            </div>
+          </div>   
+        </div>
+        
+        <div class="col-6 col-lg-6 d-none d-lg-block">
+          <div class="d-flex justify-content-center">
+            <img src="assets/Regist-img.jpg"  class="img-fluid">
+          </div>
+        </div>
+        
       </div>
 
-    <div class="form-floating">
+      <div class="row">
+        <div class="col-6 d-flex justify-content-center">
+          
+          <br>
+                    
+        </div>
+        <div class="col-6">
 
-      <input type="id" id="DNI" class="form-control" id="floatingInput" placeholder="Ingrese su número de documentación">
-      <label for="floatingInput">Número de Documento</label>
-
-    </div>
-
-    <div class="form-floating">
-
-        <input type="email" class="form-control" id="floatingInput" placeholder="correo@ejemplo.com">
-        <label for="floatingInput">Dirección de Correo</label>
-  
+        </div>
       </div>
-
-    <div class="form-floating">
-
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
-      <label for="floatingPassword">ingrese una Contraseña</label>
+      <br>
 
     </div>
-
-    <div class="form-floating">
-
-        <input type="password" class="form-control" id="floatingPassword2" placeholder="Ingrese nuevamente su Contraseña">
-        <label for="floatingPassword">Confirme su Contraseña</label>
   
-    </div>
 
 </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">registrarse</button>
-
-  </form>
+  

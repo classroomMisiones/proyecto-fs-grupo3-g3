@@ -1,6 +1,9 @@
 body {
     font-family: 'Varela Round', sans-serif;
 }
+body { 
+    padding-top: 30px;
+}
 .modal-login {
     width: 350px;
     margin: 30px auto;
@@ -85,6 +88,7 @@ body {
     font-size: 13px;
     justify-content: center;
 }
+
 .modal-login a {
     color: #fff;
     text-decoration: underline;

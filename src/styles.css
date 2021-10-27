@@ -1,14 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+
 body { 
-    padding-top: 70px;
-    height:1vh;
+    padding-top: 48px;
 }
-html{
+
+/* html{
     height:100%;
-}
+} */
+
 /* nav{
     height:50px;
   } */
-foot{
-height:40px;
+
+h1 { 
+    font-family: 'Public Sans', sans-serif; 
+    font-weight:400;
+    font-size:48px;
+    color: #3E6BFD;
 }
+h2 { 
+    font-family: 'Public Sans', sans-serif; 
+    font-weight:200;
+    font-size:40px;
+    color: #3E6BFD;
+}
+h3 { 
+    font-family: 'Public Sans', sans-serif; 
+    font-weight:200;
+    font-size:30px;
+    color: #3E6BFD;
+}
+h4 { 
+    font-family: 'Public Sans', sans-serif; 
+    font-weight:200;
+    font-size:22px;
+    color: #747474;
+}
+h5 { 
+    font-family: 'Public Sans', sans-serif; 
+    font-weight:200;
+    font-size:18px;
+    color: #747474;
+}
+h6 { 
+    font-family: 'Public Sans', sans-serif; 
+    font-weight:200;
+    font-size:12px;
+    color: #747474;
+}
+
+.box-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

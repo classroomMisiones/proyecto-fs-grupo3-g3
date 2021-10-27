@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators, MaxLengthValidator} from '@angular/forms';
 
   @Component({
     selector: 'app-ingresar-dinero',
@@ -15,9 +15,22 @@ export class IngresarDineroComponent{
    this.buildForm();
    };
 
-   get cvuNovalido(){
-    return this.form.get('cvu')?.invalid && this.form.get ('cvu')?.touched
+   get tarjetaNovalido(){
+    return this.form.get('tarjeta')?.invalid && this.form.get ('tarjeta')?.touched
     }
+
+   get vencimientoNovalido(){
+      return this.form.get('vencimiento')?.invalid && this.form.get ('vencimiento')?.touched
+    }
+
+   get nombreNovalido(){
+       return this.form.get('nombre')?.invalid && this.form.get ('nombre')?.touched
+    }
+
+    get apellidoNovalido(){
+      return this.form.get('apellido')?.invalid && this.form.get ('apellido')?.touched
+   }
+
     get codigoNovalido(){
      return this.form.get('codigo')?.invalid && this.form.get ('codigo')?.touched
      }
@@ -31,9 +44,12 @@ export class IngresarDineroComponent{
    private buildForm() {
     this.form = this.formBuilder.group({
     
-    cvu: ['', [Validators.required, Validators.min(1000000000000000000000),Validators.max(9999999999999999999999)]],
+    tarjeta: ['', [Validators.required, Validators.minLength(16),Validators.maxLength(16)]],
+    vencimiento: ['', [Validators.required, Validators.minLength(7), Validators.maxLength(7)]],
+    nombre: ['', [Validators.required, Validators.minLength(3),Validators.maxLength(16)]],
+    apellido: ['', [Validators.required, Validators.minLength(2),Validators.maxLength(16)]],
     codigo: ['', [Validators.required, Validators.min(100), Validators.max(999)]],
-    ingresar: ['', [Validators.required, Validators.min(100), Validators.max(20000)]],
+    ingresar: ['', [Validators.required, Validators.min(100), Validators.max(50000)]],
      });
   
    }

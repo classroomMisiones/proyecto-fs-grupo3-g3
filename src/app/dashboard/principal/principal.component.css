@@ -1,6 +1,8 @@
 .dash-img {
-  vertical-align: bottom;
+  vertical-align: middle;
   border: 0;
+  width: 100%;
+  height: auto;
 }
 /* .stl {
     padding: 30px 30px;
@@ -15,24 +17,15 @@
     border-radius: 20px;
   }
  */
-.titulo {
-  font-family: Roboto;
-  font-style: normal;
-  /* display: flex; */
-  /* align-items: center; */
-  color: #000000;
-}
 
-.subtitulo {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  display: flex;
-  align-items: center;
-
-  color: #3a0ca3;
-}
 
 .overf {
   overflow: hidden;
+}
+
+.marg-form-d {
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-left: 34px;
+  padding-right: 34px;
 }

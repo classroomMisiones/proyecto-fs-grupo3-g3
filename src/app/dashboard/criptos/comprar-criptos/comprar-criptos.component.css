@@ -7,20 +7,13 @@
     margin-left: 10px;
     margin-right: 10px;
     border: none ;
-    box-shadow: 0 6px 12px 0 rgb(0 0 0 / 20%);
+    /* box-shadow: 0 6px 12px 0 rgb(0 0 0 / 20%); */
     background-color:#d6e8fa;
     color:rgb(80, 101, 122);
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
-
-/* .marg{
-    margin-top: 60px;
-    margin-bottom: 60px;
-} */
-
-button {
-    
+button {    
     padding: 5px 15px;
     border-radius: 8px;
     /* margin: 5px 0px; */

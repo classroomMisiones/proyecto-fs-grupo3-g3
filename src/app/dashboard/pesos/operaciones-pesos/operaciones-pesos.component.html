@@ -3,27 +3,18 @@
     <div class="col-12 col-lg-6">
       <div class="c justify-center-center">
         <h2 class="text-center mb-6 fs-3">CONSULTA ÚLTIMAS OPERACIONES</h2>
+        
         <form [formGroup]="form" (ngSubmit)="save($event)">
           <div class="row g-3">
             <div class="col-12 mb-3">
-              Ingreso de Dinero: <br />
-              <input
-                type="number"
-                formControlName="ingreso"
-                class="form-control"
-                placeholder="pesos"
-              />
-            </div>
+            
+              Alias/CBU: <br> 
+              <input type="text" formControlName="cvu" 
+              class="form-control" placeholder="Alias/CBU"
+              [class.is-invalid]="cvuNovalido">
+              <small *ngIf="cvuNovalido" class="text-danger"> ingrese 22 dígitos</small>
 
-            <div class="col-12 mb-3">
-              Transferencia de Dinero: <br />
-              <input
-                type="number"
-                formControlName="transferencia"
-                class="form-control"
-                placeholder="pesos"
-              />
-            </div>
+        
 
             <div class="col-12 mb-3">
               Saldo Actual Disponible: <br />
@@ -36,13 +27,8 @@
             </div>
 
             <div class="d-grid col-3 mb-3 mx-auto">
-              <button
-                type="submit"
-                [disabled]="form.invalid"
-                class="btn btn-primary"
-              >
-                Enviar
-              </button>
+              <button type="submit"[disabled]="form.invalid" class="btn btn-primary">Enviar </button> 
+            </div>
             </div>
           </div>
         </form>

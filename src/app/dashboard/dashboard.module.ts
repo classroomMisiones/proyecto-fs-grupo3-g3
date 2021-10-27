@@ -23,6 +23,7 @@ import { PrincipalComponent } from "./principal/principal.component";
         DashboardRoutingModule,
         FormsModule,
         ReactiveFormsModule,
+        
     ],
     exports: [
 /*         ComisionesVigentesComponent,
@@ -49,6 +50,7 @@ import { PrincipalComponent } from "./principal/principal.component";
         TransferirDineroComponent,
         PrincipalComponent,
         DashboardComponent, */
+        
     ]
   })
 

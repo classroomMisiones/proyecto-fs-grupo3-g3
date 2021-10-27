@@ -1,5 +1,3 @@
-
-
 <div class="container justify-center-center">
     <div class="row align-items-center">
         
@@ -11,77 +9,60 @@
 
                 <form [formGroup]="formulario" (ngSubmit)="verificar()" class="row g-1">
                 
-                        
-                        <div class="col-12 mb-3">
-                            <label for="moneda" class="form-label">Moneda a comprar<span class="text-danger"> *</span></label>
-                            <select class="form-select" id="moneda" formControlName="moneda">
-                                <option selected disabled value="">Seleccione Criptomoneda que desea comprar</option>
-                                <option value="1">Bitcoin</option>
-                                <option value="2">Ethereum</option>
-                                <option value="3">Dogecoin</option>
-                                <option value="4">Monero</option>
-                            </select>
-
-                            <div *ngIf="moneda?.valid"></div>
-                            <div *ngIf="moneda?.invalid && (moneda?.dirty || moneda?.touched)">
-                                <div *ngIf="moneda?.hasError('required')">
-                                <p>Este campo es requerido.</p>
+                    <div class="col-12">
+                        <div class="row">
+                            <label for="selectmoneda" class="form-label">Qué cripto querés comprar?<span class="text-danger"> *</span></label>
+                            <div class="col-10">
+                                <div class="col-12 mb-3">
+                                    <select class="form-select"  id="selectmoneda" formControlName="selectmoneda" (change)="CambiaIcono()">
+                                    <!-- <select class="form-select"  id="selectmoneda" formControlName="selectmoneda"> -->
+                                        <option selected disabled value="">Seleccione una opción</option>
+                                        <option value="2">Bitcoin</option>
+                                        <option value="3">Ethereum</option>
+                                        <option value="4">Dogecoin</option>
+                                        <option value="5">Monero</option>
+                                    </select>                                   
                                 </div>
                             </div>
-
-                        </div>
-                        
-                        <div class="col-12 mb-3">
-                            <label for="monto" class="form-label">Monto a comprar<span class="text-danger"> *</span></label>
-                            <input type="text" class="form-control"  id="monto" placeholder="Monto" formControlName="monto">
-                            <div class="valid-feedback">Ok!</div>
-                            <div class="invalid-feedback">Por favor, complete el campo</div>
-
-                            <div *ngIf="monto?.valid"></div>
-                            <div *ngIf="monto?.invalid && (monto?.dirty || monto?.touched)">
-                                <div *ngIf="monto?.hasError('required')">
-                                <p>Este campo es requerido.</p>
-                                </div>
-                                <div *ngIf="monto?.hasError('min')">
-                                    <p>El monto debe ser mayor a cero.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-12">
-                            <div class="row">
-                                <label for="selectmoneda" class="form-label">Pagar con...<span class="text-danger"> *</span></label>
-                                <div class="col-10">
-                                    <div class="col-12 mb-3">
-                                        <select class="form-select"  id="selectmoneda" formControlName="selectmoneda">
-                                            <option selected disabled value="">Seleccione con que desea pagar</option>
-                                            <option value="1">Peso</option>
-                                            <option value="2">Bitcoin</option>
-                                            <option value="3">Ethereum</option>
-                                            <option value="4">Dogecoin</option>
-                                            <option value="5">Monero</option>
-                                        </select>
-
-                                        <div *ngIf="selectmoneda?.valid"></div>
-                                        <div *ngIf="selectmoneda?.invalid && (selectmoneda?.dirty || selectmoneda?.touched)">
-                                            <div *ngIf="selectmoneda?.hasError('required')">
-                                            <p>Este campo es requerido.</p>
-                                            </div>
-                                        </div>
-            
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <img class="mx-auto d-block" id="imgmoneda" width="40" src="assets/monedas/blank.png"/>
-                                </div>
+                            <div class="col-2">
+                                <!-- <img src="{{imageSrc}}" alt="{{imageAlt}}" /> -->
+                                <!-- <img class="mx-auto d-block" id="imgmoneda" width="40" [src]='imageSrc'/> -->
+                                <img class="mx-auto d-block" id="imgmoneda" width="40" src='imgsrc'>
+                                <!-- <img class="mx-auto d-block" id="imgmoneda" width="40" src="assets/monedas/blank.png"/> -->
                             </div>
                         </div>
+                    </div>
 
-                        <div class="d-grid col-6 mx-auto">
-                            <button class="btn btn-primary" type="submit">Comprar</button>
+                    <div class="row">
+                        <div class="col text-danger">
+                            <div *ngIf="selectmoneda?.valid"></div>
+                            <div *ngIf="selectmoneda?.invalid && (selectmoneda?.dirty || selectmoneda?.touched)">
+                                <p *ngIf="selectmoneda?.hasError('required')">Este campo es requerido.</p>
+                            </div>
                         </div>
-               
+                    </div>
                     
+                    <div class="col-12 mb-3">
+                        <label for="monto" class="form-label">Monto a comprar<span class="text-danger"> *</span></label>
+                        <input type="text" class="form-control"  id="monto" placeholder="Monto" formControlName="monto">
+                        <div class="valid-feedback">Ok!</div>
+                        <div class="invalid-feedback">Por favor, complete el campo</div>
+
+                        <div *ngIf="monto?.valid"></div>
+                        <div *ngIf="monto?.invalid && (monto?.dirty || monto?.touched)">
+                            <div *ngIf="monto?.hasError('required')">
+                            <p>Este campo es requerido.</p>
+                            </div>
+                            <div *ngIf="monto?.hasError('min')">
+                                <p>El monto debe ser mayor a cero.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-grid col-6 mx-auto">
+                        <button class="btn btn-primary" type="submit">Comprar</button>
+                    </div>
+               
                 </form>
                 
             </div>

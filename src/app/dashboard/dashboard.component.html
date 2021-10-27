@@ -1,106 +1,50 @@
+<!-- <dash-navbar></dash-navbar> -->
 
-<div class="side-navbar border-end d-flex justify-content-between flex-wrap flex-column active-nav" id="sidebar">
-  <!-- Sidebar-->
-    <nav class="bg-white">
-      
-        <div class="list-group list-group-flush">
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="shadow" id="sidebar-wrapper"  [ngClass]="status ? 'hide' : 'show'">
+       
+    <div class="sidebar-heading">Pesos</div>
 
-          <div class="container py-3">
-              <img src="../../assets/icons/coins.png" class="img-fluid d-block py-2" width="70%" alt="">
-              <span class="text-primary">
-                <b>Cryptos</b>
-              </span>
-            </div>
+    <div class="list-group list-group-flush">
+      <a href="#" class="list-group-item list-group-item-action bg-transparent p-2" routerLink="ingresardinero">Ingresar dinero</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent p-2" routerLink="retirar">Retirar dinero</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent p-2" routerLink="oppesos">Operaciones</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent p-2" routerLink="transferir">Transferir</a>
+    </div>
 
-            <ul class="btn-toggle-nav nav nav-pills nav-flush flex-column">
-              <li class="nav-item">
-                <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="comprar" aria-current="page" title="Comprar" data-bs-toggle="tooltip" data-bs-placement="right">
-                  
-                  Comprar
-                </a>
-              </li>
-              <li>
-                <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="vender" title="Vender" data-bs-toggle="tooltip" data-bs-placement="right">
-                  
-                  Vender
-                </a>
-              </li>
-              <li>
-                <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="opcripto" title="Operaciones" data-bs-toggle="tooltip" data-bs-placement="right">
-                  
-                  Operaciones
-                </a>
-              </li>
-              <li>
-                <a href="#" class=" link-primary nav-link py-1  border-top border-bottom" title="Swap" data-bs-toggle="tooltip" data-bs-placement="right">
-                  
-                  Swap
-                </a>
-              </li>
-              
-            </ul>
+    <div class="sidebar-heading">Cryptos</div>
 
-            <div class="container-fluid py-3">
-              <img src="../../assets/icons/peso.png" class="img-fluid ml-auto d-block py-2" width="70%" alt="">
-              <span class="text-primary">
-                <b>Pesos</b>
-              </span>
-            </div>
+    <div class="list-group list-group-flush">
+      <a href="#" class="list-group-item list-group-item-action bg-transparent p-2" routerLink="comprar">Comprar</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent p-2" routerLink="vender">Vender</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent p-2" routerLink="opcripto">Operaciones</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent p-2" routerLink="swap">Swap</a>
+    </div>
 
-            <ul class="btn-toggle-nav nav nav-pills nav-flush flex-column text-Left">
-              <li class="nav-item">
-                <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="ingresardinero" aria-current="page" title="Comprar" data-bs-toggle="tooltip" data-bs-placement="right">
-                  <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"/></svg> -->
-                  Ingresar dinero 
-                </a>
-              </li>
-              <li>
-                <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="retirar" title="Vender" data-bs-toggle="tooltip" data-bs-placement="right">
-                  <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Dashboard"><use xlink:href="#speedometer2"/></svg> -->
-                  Retirar dinero
-                </a>
-              </li>
-              <li>
-                <a href="#" class=" link-primary nav-link py-1  border-top" routerLink="oppesos" title="Operaciones" data-bs-toggle="tooltip" data-bs-placement="right">
-                  <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"/></svg> -->
-                  Operaciones
-                </a>
-              </li>
-              <li>
-                <a href="#" class=" link-primary nav-link py-1  border-top border-bottom" routerLink="transferir" title="Swap" data-bs-toggle="tooltip" data-bs-placement="right">
-                  <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"/></svg> -->
-                  Transferir
-                </a>
-              </li>
-              
-            </ul>
-        </div>
-    </nav>
-    
-</div>
-  
-<div class="my-container active-cont">
-  <div class="container-fluid cont-dash">
-    <button class="btn btn-primary" id="menu-btn">Menu</button>
-      <div class=" justify-content-around align-items-center">
-        <router-outlet></router-outlet>
-      </div>
+    <div class="sidebar-heading">Opciones</div>
+
+    <div class="list-group list-group-flush">
+      <a href="#" class="list-group-item list-group-item-action bg-transparent p-2" routerLink="principal">Panel principal</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent p-2" routerLink="comprar">Mis datos</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent p-2" routerLink="vender">Preferencias</a>
+      <a href="#" class="list-group-item list-group-item-action bg-transparent p-2" routerLink="opcripto">Cerrar sesión</a>
+    </div>
+
   </div>
+ 
+  <!-- /Sidebar -->
+
+  <div id="page-content-wrapper box-centered">
+
+
+    <button class="btn btn-primary  marg-top" (click)="clickEvent()">Menu</button>
+
+
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+
+    
+  
 </div>
-
-<script src="dashboard.component.js"></script>
-
-<!-- <script>
-        
-        
-  window.onload=function(){
-    var menu_btn = document.querySelector("#menu-btn");
-    var sidebar = document.querySelector("#sidebar");
-    var container = document.querySelector(".my-container");
-    menu_btn.addEventListener('click', () => {
-      sidebar.classList.toggle("active-nav");
-      container.classList.toggle("active-cont");
-    });
-    }
-
-</script> -->

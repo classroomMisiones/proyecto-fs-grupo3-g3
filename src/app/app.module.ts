@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,10 +24,15 @@ import { ComisionesVigentesComponent } from './dashboard/criptos/comisiones-vige
 import { OperacionesCriptosComponent } from './dashboard/criptos/operaciones-criptos/operaciones-criptos.component';
 import { LoginComponent } from './home/login/login.component';
 import { RegistroComponent } from './home/registro/registro.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardRoutingModule } from './dashboard/dashboard.routing';
 import { ComprarCriptosComponent } from './dashboard/criptos/comprar-criptos/comprar-criptos.component';
+<<<<<<< HEAD
 import { ServicioModeloService } from './servicio-modelo.service';
+=======
+import { VenderCriptosComponent } from './dashboard/criptos/vender-criptos/vender-criptos.component';
+import { DashNavbarComponent } from './dashboard/navbar/navbar.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +54,11 @@ import { ServicioModeloService } from './servicio-modelo.service';
     ComisionesVigentesComponent,
     OperacionesCriptosComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    VenderCriptosComponent,
+    DashNavbarComponent,
+    AboutusComponent,
+    CotizacionesComponent
   ],
   imports: [
     BrowserModule,
